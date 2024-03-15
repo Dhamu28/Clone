@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhamu Library</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-purple-500 to-indigo-600 min-h-screen flex flex-col justify-between">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 text-white p-4 flex justify-between items-center">
+        <div class="text-2xl font-bold">Dhamu Library</div>
+        <button class="md:hidden focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+        <div class="hidden md:flex space-x-4">
+            <a href="#" class="hover:underline">Home</a>
+            <a href="#" class="hover:underline">About</a>
+            <a href="#" class="hover:underline">Services</a>
+            <a href="#" class="hover:underline">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="text-center text-white py-24 relative">
+        <h1 class="text-5xl font-bold">Dhamu Library</h1>
+        <h2 class="text-2xl mt-4">Explore the World of Knowledge</h2>
+    </section>
+
+    <!-- Infographics Section -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8">
+        <div class="glass p-4 rounded-lg text-white text-center">
+            <h3 class="text-2xl font-bold">Vast Collection</h3>
+            <p>Discover a wide range of books and resources</p>
+        </div>
+        <div class="glass p-4 rounded-lg text-white text-center">
+            <h3 class="text-2xl font-bold">Community Events</h3>
+            <p>Engage in book clubs, discussions, and more</p>
+        </div>
+        <div class="glass p-4 rounded-lg text-white text-center">
+            <h3 class="text-2xl font-bold">Digital Access</h3>
+            <p>Access e-books, audiobooks, and online resources</p>
+        </div>
+        <div class="glass p-4 rounded-lg text-white text-center">
+            <h3 class="text-2xl font-bold">Educational Programs</h3>
+            <p>Participate in workshops, seminars, and courses</p>
+        </div>
+    </section>
+
+    <!-- Owner Message Section -->
+    <section class="text-white p-8 flex items-center">
+        <div class="w-1/3">
+            <img src="owner.jpg" alt="Owner" class="rounded-full" style="width: 150px; height: 150px;">
+        </div>
+        <div class="w-2/3 pl-8">
+            <h3 class="text-3xl font-bold">A Message from the Owner</h3>
+            <p>Welcome to Dhamu Library! We are committed to providing a welcoming and enriching environment for all.</p>
+        </div>
+    </section>
+
+    <!-- Slider Section -->
+    <section class="p-8 relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-900 to-transparent opacity-50"></div>
+        <div class="relative z-10">
+            <h2 class="text-4xl font-bold text-white mb-8">Featured Books</h2>
+            <!-- Slider Component -->
+            <div class="flex space-x-4 overflow-x-auto pb-8">
+                <div class="w-64 h-96 bg-gray-800 rounded-lg flex-shrink-0"></div>
+                <div class="w-64 h-96 bg-gray-800 rounded-lg flex-shrink-0"></div>
+                <div class="w-64 h-96 bg-gray-800 rounded-lg flex-shrink-0"></div>
+                <div class="w-64 h-96 bg-gray-800 rounded-lg flex-shrink-0"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="text-center py-16 bg-white text-gray-800">
+        <h2 class="text-4xl font-bold mb-4">Join our Library Today!</h2>
+        <p class="mb-8">Unlock a world of knowledge, imagination, and discovery.</p>
+        <button class="bg-purple-600 text-white px-8 py-3 rounded-full hover:bg-purple-700 focus:outline-none">Sign Up
+            Now</button>
+    </section>
+
+    <!-- Register Section -->
+    <section class="text-white p-8">
+        <h2 class="text-4xl font-bold mb-4">Register for Membership</h2>
+        <form class="flex flex-col space-y-4">
+            <input type="text" placeholder="Full Name" class="p-4 rounded-lg bg-gray-800">
+            <input type="email" placeholder="Email Address" class="p-4 rounded-lg bg-gray-800">
+            <input type="password" placeholder="Password" class="p-4 rounded-lg bg-gray-800">
+            <button type="submit"
+                class="bg-purple-600 text-white px-8 py-3 rounded-full hover:bg-purple-700 focus:outline-none">Register</button>
+        </form>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="bg-gray-800 text-white p-8 text-center">
+        <h2 class="text-4xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+        <p class="mb-8">Stay updated with our latest events, book releases, and promotions.</p>
+        <form class="flex flex-col space-y-4">
+            <input type="email" placeholder="Enter your email" class="p-4 rounded-lg bg-gray-700">
+            <button type="submit"
+                class="bg-purple-600 text-white px-8 py-3 rounded-full hover:bg-purple-700 focus:outline-none">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-4">
+        <p>&copy; 2023 Dhamu Library. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for interactive elements and local storage implementation
+        // Your code here
+    </script>
+</body>
+
+</html>
+
+
+Prompt “Need a landing page for my library. in home there is 
+hero section titled "Dhamu Library" and a sub heading 
+Section 2: - There is 4 infographics
+Section 3:- Owner message with photo
+section 4:- Slider 
+Section 5 :- CTA
+Section 6 :- Register here
+section 7 :- newslatter
+footer
+use tailwind css with glasmorphisom with bright color
+color theme should be unique”
