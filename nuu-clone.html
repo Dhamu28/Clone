@@ -18,66 +18,62 @@
 
 </style>
 <body class="bg-white">
-    <!-- <h1 class="text-3xl">This is starting page</h1> -->
-    <header class="max-w-[1340px] mx-auto pt-2">
-        <nav class="flex justify-between sm:items-center h-[60px] mx-4">
-            <!-- Logo -->
+    <header class="bg-white  sticky top-0">
+        <nav class="max-w-[1340px] mx-auto flex items-center justify-between h-[64px] px-4">
+            <div class="w-16">
+                <!-- Logo -->
             <h1 class="text-3xl font-bold text-black">Web</h1>
-            <!-- Desktop menu Items -->
-            <div class="flex">
-                <ul class="hidden sm:flex sm:items-center jutsify-between gap-2">
-                    <li class="bg-white hover:bg-gray-100 rounded-xl px-3 py-1"><a href="#">Overview</a></li>
-                    <li class="bg-white hover:bg-gray-100 rounded-xl px-3 py-1"><a href="#">Web Tech</a></li>
-                    <li class="bg-white hover:bg-gray-100 rounded-xl px-3 py-1"><a href="#">Web Dev</a></li>
-                    <li class="bg-white hover:bg-gray-100 rounded-xl px-3 py-1"><a href="#">Web Design</a></li>
-                    <li class="bg-white hover:bg-gray-100 rounded-xl px-3 py-1"><a href="#">Web Talk</a></li>
+            </div>
+            <div class="drop-menu duration-500 absolute md:static bg-white min-h-[60vh] min-h-[64px] left-[-100%] top-[64px] flex w-full md:w-auto">
+                <ul class="flex flex-col md:flex-row md:items-center gap-2 w-full md:w-auto">
+                    <li class="hover:bg-gray-100 round-none md:rounded-lg px-3 py-1"><a href="#">Overview</a></li>
+                    <li class="hover:bg-gray-100 round-none md:rounded-lg px-3 py-1"><a href="#">Tech</a></li>
+                    <li class="hover:bg-gray-100 round-none md:rounded-lg px-3 py-1"><a href="#">Developers</a></li>
+                    <li class="hover:bg-gray-100 round-none md:rounded-lg px-3 py-1"><a href="#">Designer</a></li>
+                    <li class="hover:bg-gray-100 round-none md:rounded-lg px-3 py-1"><a href="#">Talks</a></li>
+                    <li class="block md:hidden "><button class="hover:bg-gray-100 rounded-xl px-3 py-1">Sign In</button> </li>
+                    <li class="block md:hidden"><button class="bg-black text-white rounded-xl px-4 py-1">Get Started</button></li>
                 </ul>
             </div>
-            <div class="hidden sm:flex gap-2">
-                <button>Sign In</button>
-                <button class="bg-black text-white rounded-xl px-4 py-1">Get Started</button>
-            </div>
-            <!-- Mobile menu button-->
-            <div class="flex items-center -mr-2 sm:hidden">
-                <button id="mobile-menu-toggle" class="text-gray-400 hover:text-white focus:outline-none focus:text-white">
+            <div class="hidden md:flex gap-2">
+                <button class="hover:bg-gray-100 rounded-lg px-3 py-1">Sign In</button>
+                <button class="bg-black text-white rounded-lg px-4 py-1">Get Started</button>
+            </div>              
+            <button id="toggleButton" class="md:hidden open">
                 <!-- Heroicon name: menu -->
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="icon open-icon h-8 w-8 text-2xl" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
-                </button>
-            </div>
+                <svg class="icon close-icon h-8 w-8" style="display: none;" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z"></path>
+                </svg>
+            </button>
+            <script>
+                const toggleMenu = document.querySelector('.drop-menu');
+                document.getElementById("toggleButton").addEventListener("click", function() {
+                var button = this;
+                toggleMenu.classList.toggle('left-[0px]');
+                button.classList.toggle("open");
+                button.classList.toggle("close");
+                var openIcon = button.querySelector(".open-icon");
+                var closeIcon = button.querySelector(".close-icon");
+                if (button.classList.contains("open")) {
+                    openIcon.style.display = "inline";
+                    closeIcon.style.display = "none";
+                } else {
+                    openIcon.style.display = "none";
+                    closeIcon.style.display = "inline";
+                }
+                });
 
+            </script>
         </nav>
-        <!-- Mobile Menu -->
-        <div class="mobile-menu sm:hidden">
-            <ul class="flex-col">
-                <li class="bg-white hover:bg-gray-100 px-3 py-2"><a href="#">Overview</a></li>
-                <li class="bg-white hover:bg-gray-100 px-3 py-2"><a href="#">Web Tech</a></li>
-                <li class="bg-white hover:bg-gray-100 px-3 py-2"><a href="#">Web Dev</a></li>
-                <li class="bg-white hover:bg-gray-100 px-3 py-2"><a href="#">Web Design</a></li>
-                <li class="bg-white hover:bg-gray-100 px-3 py-2"><a href="#">Web Talk</a></li>
-                <li class="bg-white hover:bg-gray-100 px-3 py-2"><button>Sign In</button></li>
-                <li class="bg-white hover:bg-gray-100 px-3 py-2"><button class="bg-black text-white rounded-lg px-4 py-1">Get Started</button></li>
-            </ul>
-        </div>
-        <script>
-            document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
-              var mobileMenu = document.getElementById('mobile-menu');
-              if (mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.remove('hidden');
-                console.log(mobileMenu);
-              } else {
-                mobileMenu.classList.add('hidden');
-              }
-            });
-          </script>
     </header>
-</body>
     <!-- hero section -->
-    <section class="max-w-[1340px] mx-auto py-32">
-        <div class="flex flex-col justify-between items-center gap-2">
-           <h1 class="text-7xl text-black cursive_text">Meet Your New</h1> 
-           <h1 class="text-7xl text-black font-semibold">Developers</h1>
+    <section class="max-w-[1340px] mx-4 md:mx-auto py-16 md:py-32">
+        <div class="flex flex-col justify-between items-center">
+           <h1 class="text-5xl md:text-7xl text-black cursive_text">Meet Your New</h1> 
+           <h1 class="text-5xl md:text-7xl text-black font-semibold">Developers</h1>
            <div class="flex gap-4 pt-10">
                 <button class="text-black rounded-2xl border border-1 border-gray-800 px-6 py-2">Live Demo</button>
                 <button class="bg-black rounded-2xl text-white px-6 py-2 ">Get Started free</button>
@@ -86,122 +82,76 @@
         <h1></h1>
     </section>
     <!-- Section hero image -->
-    <section class="max-w-[1340px] mx-auto pt-6 text-center">
-        <img class="rounded-3xl mx-auto w-full max-h-max" src="https://img.freepik.com/free-vector/realistic-responsive-website-design-collection_23-2149500087.jpg?t=st=1710750836~exp=1710754436~hmac=b1123680a0c700264b8b744b068a1cc005133d5c0eda0b269e07a6cb7e5ac0d7&w=996" alt="">
-        <div class="py-20 flex flex-col gap-6 w-3/5 mx-auto">
-            <h2 class="text-5xl font-semibold leading-tight">Lorem ipsum, dolor sit amet consectetur adipisicing!</h2>
-        <p class="text-2xl leading-snug">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et unde, facilis pariatur totam numquam magnam corporis suscipit laborum cum autem.</p>
+    <section class="max-w-[1340px] px-4 md:mx-auto pt-6 text-center">
+        <img class="rounded-3xl mx-auto w-full" src="https://img.freepik.com/free-vector/realistic-responsive-website-design-collection_23-2149500087.jpg?t=st=1710750836~exp=1710754436~hmac=b1123680a0c700264b8b744b068a1cc005133d5c0eda0b269e07a6cb7e5ac0d7&w=996" alt="">
+        <div class="py-10 md:py-20 flex flex-col gap-6 w-4/5 md:w-3/5 mx-auto">
+            <h2 class="text-3xl md:text-5xl font-semibold leading-tight">Lorem ipsum, dolor sit amet consectetur adipisicing!</h2>
+            <p class="text-xl md:text-2xl leading-snug">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et unde, facilis pariatur totam numquam magnam corporis suscipit laborum cum autem.</p>
         </div>
     </section>
     <!-- Section 50-50 box with hover text -->
-    <section class="max-w-[1340px] mx-auto pt-6 ">
-        <div class="flex gap-6 mx-auto">
-            <div class="bg-cover bg-center w-full h-screen rounded-3xl" style="background-image: url(https://img.freepik.com/free-photo/3d-rendering-website-hosting-concept_23-2149484780.jpg?t=st=1710750630~exp=1710754230~hmac=79beaf0b564eb28f879c2e5e7735128b2c16988e697ac71be4a81b877af82c9f&w=740)">
-                <p class="p-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, eum.</p>
+    <section class="max-w-[1340px] mx-4 md:mx-auto pt-6">
+        <div class="flex flex-col md:flex-row px-4 mx-auto gap-2">
+            <div class="bg-cover bg-center h-screen rounded-3xl mx-auto" style="background-image: url(https://img.freepik.com/free-photo/3d-rendering-website-hosting-concept_23-2149484780.jpg?t=st=1710750630~exp=1710754230~hmac=79beaf0b564eb28f879c2e5e7735128b2c16988e697ac71be4a81b877af82c9f&w=740)">
+                <p class="p-2 md:p-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, eum.</p>
             </div>
-            <div class="bg-cover bg-center w-full rounded-3xl" style="background-image: url(https://img.freepik.com/free-vector/colorful-business-landing-page_52683-982.jpg?t=st=1710750934~exp=1710754534~hmac=02389fd08e6943612244e73fbdd21842cbf5f5df3bb74fd355b95079a0ca463f&w=740)">
-                <p class="p-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, eum.</p>
+            <div class="bg-cover bg-center h-screen rounded-3xl mx-auto" style="background-image: url(https://img.freepik.com/free-vector/colorful-business-landing-page_52683-982.jpg?t=st=1710750934~exp=1710754534~hmac=02389fd08e6943612244e73fbdd21842cbf5f5df3bb74fd355b95079a0ca463f&w=740)">
+                <p class="p-2 md:p-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, eum.</p>
             </div>
         </div>
-        <div class="py-20 flex flex-col gap-6 w-3/5 mx-auto text-center">
-            <h2 class="text-5xl font-semibold leading-tight">Lorem ipsum dolor, <span class="cursive_text"> sit amet!</span></h2>
-        <p class="text-2xl leading-snug">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et unde, facilis pariatur totam numquam magnam corporis suscipit laborum cum autem.</p>
+        <div class="py-10 md:py-20 flex flex-col gap-6 tw-4/5 md:w-3/5 mx-auto text-center">
+            <h2 class="text-3xl :text-5xl font-semibold leading-tight">Lorem ipsum dolor, <span class="cursive_text"> sit amet!</span></h2>
+        <p class="text-xl md:text-2xl leading-snug">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et unde, facilis pariatur totam numquam magnam corporis suscipit laborum cum autem.</p>
         </div>
     </section>
-    <!-- Tailwind carousel -->
-    <section>
-        <div class="w-full overflow-hidden relative">
-            <div class="flex flex-wrap justify-between transition-transform duration-500 ease-in-out" id="slider">
-              <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 py-2 card">
-                <!-- Card content -->
-                <div class="flex flex-col rounded-3xl">
-                    <div class="w-1/2 h-64 bg-cover bg-top bg-[url('https://img.freepik.com/free-vector/modern-web-design-concept-with-flat-style_23-2147932172.jpg?w=740&t=st=1710756476~exp=1710757076~hmac=ca1a7bd04efcdb9f08856589c32d6ec28e131c57c47c6fdb283657c5bfbb714e')]">
-                    </div>
-                    <div class="w-1/2 h-64 flex flex-col items-center justify-center bg-yellow-300" >
-                      <h1 class="text-4xl font-bold leading-snug ">Tailwind CSS</h1>
-                      <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
-                  </div>
-              </div>
-              <!-- Add more cards as needed -->
-              <div class="flex flex-col rounded-3xl w-1/4">
-                <div class="w-1/2 h-64 bg-cover bg-top bg-[url('https://img.freepik.com/free-vector/modern-web-design-concept-with-flat-style_23-2147932172.jpg?w=740&t=st=1710756476~exp=1710757076~hmac=ca1a7bd04efcdb9f08856589c32d6ec28e131c57c47c6fdb283657c5bfbb714e')]">
-                </div>
-                <div class="w-1/2 h-64 flex flex-col items-center justify-center bg-yellow-300" >
-                  <h1 class="text-4xl font-bold leading-snug ">Tailwind CSS</h1>
-                  <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-              </div>
-              <div class="flex flex-col rounded-3xl w-1/4">
-                <div class="w-1/2 h-64 bg-cover bg-top bg-[url('https://img.freepik.com/free-vector/modern-web-design-concept-with-flat-style_23-2147932172.jpg?w=740&t=st=1710756476~exp=1710757076~hmac=ca1a7bd04efcdb9f08856589c32d6ec28e131c57c47c6fdb283657c5bfbb714e')]">
-                </div>
-                <div class="w-1/2 h-64 flex flex-col items-center justify-center bg-yellow-300" >
-                  <h1 class="text-4xl font-bold leading-snug ">Tailwind CSS</h1>
-                  <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-              </div>
-              <div class="flex flex-col rounded-3xl w-1/4">
-                <div class="w-1/2 h-64 bg-cover bg-top bg-[url('https://img.freepik.com/free-vector/modern-web-design-concept-with-flat-style_23-2147932172.jpg?w=740&t=st=1710756476~exp=1710757076~hmac=ca1a7bd04efcdb9f08856589c32d6ec28e131c57c47c6fdb283657c5bfbb714e')]">
-                </div>
-                <div class="w-1/2 h-64 flex flex-col items-center justify-center bg-yellow-300" >
-                  <h1 class="text-4xl font-bold leading-snug ">Tailwind CSS</h1>
-                  <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-              </div>
-              <div class="flex flex-col rounded-3xl w-1/4">
-                <div class="w-1/2 h-64 bg-cover bg-top bg-[url('https://img.freepik.com/free-vector/modern-web-design-concept-with-flat-style_23-2147932172.jpg?w=740&t=st=1710756476~exp=1710757076~hmac=ca1a7bd04efcdb9f08856589c32d6ec28e131c57c47c6fdb283657c5bfbb714e')]">
-                </div>
-                <div class="w-1/2 h-64 flex flex-col items-center justify-center bg-yellow-300" >
-                  <h1 class="text-4xl font-bold leading-snug ">Tailwind CSS</h1>
-                  <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-              </div>
-            </div>
-          
-            <button id="prev-btn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-l-full rounded-r-full focus:outline-none">Previous</button>
-            <button id="next-btn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-l-full rounded-r-full focus:outline-none">Next</button>
-          </div>
-          
-          <script>
-            const slider = document.getElementById('slider');
-            const prevBtn = document.getElementById('prev-btn');
-            const nextBtn = document.getElementById('next-btn');
-            let currentIndex = 0;
-          
-            prevBtn.addEventListener('click', () => {
-              if (currentIndex > 0) {
-                currentIndex--;
-                updateSlider();
-              }
-            });
-          
-            nextBtn.addEventListener('click', () => {
-              if (currentIndex < slider.children.length - 1) {
-                currentIndex++;
-                updateSlider();
-              }
-            });
-          
-            function updateSlider() {
-              const cardWidth = slider.children[0].offsetWidth;
-              slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-            }
-          </script>
-          
-    </section>
+    
     <!-- CTA Section -->
-    <section class="bg-gray-100 p-20 text-center text-black">
-        <div class="w-2/3 mx-auto flex flex-col gap-6">
-            <h2 class="text-5xl font-semibold">Book A Free Demo</h2>
-            <p class="text-2xl font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ratione nesciunt dolorem tempore neque aliquid, quidem at consequuntur. Obcaecati, voluptate.</p>
+    <section class="w-full bg-gray-100 p-10 md:p-20 text-center text-black">
+        <div class="w-4/5 md:w-2/3 mx-auto flex flex-col gap-6">
+            <h2 class="text-3xl md:text-5xl font-semibold">Book A Free Demo</h2>
+            <p class="text-xl md:text-2xl font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ratione nesciunt dolorem tempore neque aliquid, quidem at consequuntur. Obcaecati, voluptate.</p>
             <div>
-                <div class="relative mt-2 rounded-md shadow-sm w-1/2 mx-auto">
-                  <input type="text" name="email" id="subscribe" class="block w-full rounded-3xl p-5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6" placeholder="Enter Your Email">
+                <div class="relative mt-2 rounded-md shadow-sm md:w-3/5 w-full mx-auto">
+                  <input type="text" name="email" id="subscribe" class="block w-full rounded-2xl bg-gray-100 md:rounded-3xl md:p-5 p-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm md:text-xl sm:leading-6" placeholder="Enter Your Email">
                   <div class="absolute inset-y-0 right-0 flex items-center">
-                    <button class="bg-black text-white rounded-3xl px-4 py-3 me-2" type="submit">Book A Demo</button>
+                    <button class="bg-black text-white rounded-2xl px-4 md:py-3 me-2 hidden md:block font-semibold" type="submit">Book A Demo</button>
+                    <button class="bg-black text-white rounded-xl px-2 py-1 me-1 md:hidden" type="submit">Demo</button>
                   </div>
                 </div>
-              </div>
+            </div>
         </div>
     </section>
+    <footer class="bg-black text-white p-5 md:p-20">
+        <div class="max-w-[1340px] mx-auto flex md:flex-row flex-col justify-between gap-4">
+            <div class="text-white text-4xl font-bold">
+                <a href="#">Web</a>
+            </div>
+            <div class="">
+                <ul>
+                    <li class=""><a href="">Footer Link</a></li>
+                    <li class=""><a href="">Footer Link</a></li>
+                    <li class=""><a href="">Footer Link</a></li>
+                    <li class=""><a href="">Footer Link</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <ul>
+                    <li class=""><a href="">Footer Link</a></li>
+                    <li class=""><a href="">Footer Link</a></li>
+                    <li class=""><a href="">Footer Link</a></li>
+                    <li class=""><a href="">Footer Link</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <ul>
+                    <li class=""><a href="">Footer Link</a></li>
+                    <li class=""><a href="">Footer Link</a></li>
+                    <li class=""><a href="">Footer Link</a></li>
+                    <li class=""><a href="">Footer Link</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="pt-5 md:pt-20"><span>Copyright © Web™ 2024</span><span> · </span><span>All Rights Reserved</span></p>
+    </footer>
+    </body>
 </html>
