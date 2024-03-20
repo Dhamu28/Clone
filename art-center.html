@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+        font-family: "Istok Web", sans-serif;
+    }
+</style>
+<body>
+    <header class="bg-white sticky top-0 z-10">
+        <nav class="flex justify-between items-center text-blue-600 text-md lg:text-xl h-[60px] px-[3%] shadow-sm md:shadow-none">
+            <div class="brand lg:text-3xl text-2xl ">
+                <h2 class="">Art Center</h2>
+            </div>
+            <div class="drop-menu md:flex hidden absolute md:static bg-white pb-6 md:pb-0 min-h-[60px] top-[60px] w-full md:w-auto items-center">
+                <ul class="flex flex-col md:flex-row md:items-center w-full md:w-auto lg:gap-8 gap-4">
+                    <li class="hover:top-[100%]"><a href="#">Home</a></li>
+                    <li class="hover:top-[100%]"><a href="#">About Us</a></li>
+                    <li class="hover:top-[100%]"><a href="#">Exhibitions</a></li>
+                    <li class="hover:top-[100%]"><a href="#">Events & Programs</a></li>
+                    <li class="hover:top-[100%]"><a href="#">Artists</a></li>
+                    <li class="hover:top-[100%]"><a href="#">Gallery</a></li>
+                    <li class="hover:top-[100%]"><a href="#">Get Involved</a></li>
+                    <li class="hover:top-[100%]"><a href="#">Contact Us</a></li>
+                    <li class="hover:top-[100%]"><svg class="w-6 h-5 " fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                      </svg>
+                    </li>
+                </ul>
+            </div>
+            <button id="toggleButton" class="md:hidden open">
+                <!-- Heroicon name: menu -->
+                <svg class="icon open-icon h-8 w-8 text-2xl" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+                <svg class="icon close-icon h-8 w-8" style="display: none;" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M1 13L13 1M1 1L13 13" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+            </button>
+            <script>
+                const toggleMenu = document.querySelector('.drop-menu');
+                document.getElementById("toggleButton").addEventListener("click", function() {
+                var button = this;
+                toggleMenu.classList.toggle('hidden');
+                button.classList.toggle("open");
+                button.classList.toggle("close");
+                var openIcon = button.querySelector(".open-icon");
+                var closeIcon = button.querySelector(".close-icon");
+                if (button.classList.contains("open")) {
+                    openIcon.style.display = "inline";
+                    closeIcon.style.display = "none";
+                } else {
+                    openIcon.style.display = "none";
+                    closeIcon.style.display = "inline";
+                }
+                });
+
+            </script>
+        </nav>
+    </header>
+    <!-- Hero Slider  -->
+    <section class="mx-[3%] md:py-14 py-8">
+        <!-- fade slider  -->
+        <div class="flex gap-4 flex-col">
+            <h2 class="md:text-5xl text-3xl font-semibold">Lorem ipsum dolor sit amet consectetur.</h2>
+            <p class="md:text-5xl text-3xl font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquid officia earum voluptatem libero quos itaque debitis! Optio, omnis amet.</p>
+            <a href="#" class="text-blue-600 md:text-xl text-md">Read More...</a>
+            <img class="mx-auto w-full pt-10" src="https://img.freepik.com/free-photo/young-man-beach-by-sea-generative-ai_169016-29381.jpg?t=st=1710920127~exp=1710923727~hmac=6dd37d8b9601bead815493c405852ef7ef7e508becf3f16e3267ade572728845&w=1060" alt="art slide 1" >
+        </div>
+    </section>
+    <!-- Steps slider section -->
+    <section class="mx-[3%] md:py-10 py-6 overflow-hidden">
+        <div class="flex items-end gap-4 md:py-10 pb-6">
+        <h2 class="md:text-5xl text-3xl font-semibold">Art Guide</h2> 
+        <a href="#" class="text-blue-600 md:text-xl text-md">See all...</a>
+        </div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper flex">
+            <div class="swiper-slide md:w-1/3 w-full mx-auto duration-500">
+              <!-- First slide content -->
+              <div class="relative bg-cover bg-no-repeat">
+                <img class="hover:hue-rotate-180 w-full" src="https://img.freepik.com/free-photo/abstract-eye-portrait-young-women-elegance-generated-by-ai_188544-9712.jpg?t=st=1710929832~exp=1710933432~hmac=794208b155e384892c1d770bc73f9c63e59b010049376f2f1c93ce12c75a9e42&w=1060" alt="" />
+              </div>
+              <div class="py-6 text-surface hover:text-blue-600 transition duration-500 flex flex-col">
+                <div class="py-2" >
+                    <p>16-02-2022 - 20-06-2023</p>
+                <p>The art Culture</p>
+                </div>
+                <h5 class="text-2xl font-bold leading-normal">Card title</h5>
+                <p class="text-2xl font-light">Some quick example</p>
+              </div>
+              <div class="flex gap-2 align-items justify-center">
+                <span class="rounded-3xl py-1 px-3 border border-gray-200">inosom it</span>
+                <span class="rounded-3xl py-1 px-3 border border-gray-200">inosom it</span>
+                <span class="rounded-3xl py-1 px-3 border border-gray-200">inosom it</span>
+              </div>
+            </div>
+            
+            <div class="swiper-slide md:w-1/3 w-full mx-auto duration-500">
+                <!-- Third slide content -->
+                <div class="relative bg-cover bg-no-repeat border border-gray-200">
+                  <img class="hover:hue-rotate-180" src="https://img.freepik.com/free-vector/skech-hand-holding-pen-isolated-white-background-with-urban-city-skyline-vector-illustration_460848-15646.jpg?t=st=1710930017~exp=1710933617~hmac=106b999319e574207cc8e072f4967149a3d31352c3d1687a8be61819b683f400&w=740" alt="" />
+                </div>
+                <div class="py-6 text-surface hover:text-blue-600 transition duration-500 flex flex-col">
+                  <div class="py-2" >
+                      <p>16-02-2022 - 20-06-2023</p>
+                  <p>The art of living</p>
+                  </div>
+                  <h5 class="text-2xl font-bold leading-normal">Card title</h5>
+                  <p class="text-2xl font-light">Some quick example</p>
+                </div>
+                <div class="flex gap-2 wrap">
+                    <span class="rounded-3xl py-1 px-3 border border-gray-200">lorem</span>
+                    <span class="rounded-3xl py-1 px-3 border border-gray-200">impsum </span>
+                    <span class="rounded-3xl py-1 px-3 border border-gray-200">inosom it</span>
+                </div>
+            </div>
+            <div class="swiper-slide md:w-1/3 w-full mx-auto duration-500">
+                <!-- Second slide content -->
+                <div class="relative bg-cover bg-no-repeat">
+                  <img class="hover:hue-rotate-180" src="https://img.freepik.com/free-photo/graffiti-children-bicycle_1122-2206.jpg?t=st=1710929879~exp=1710933479~hmac=acaae7992224fa940899f117cdb26814ba2b6f7ecb1e74812a1ccd0dfce81ad6&w=900" alt="" />
+                </div>
+                <div class="py-6 text-surface hover:text-blue-600 transition duration-500 flex flex-col">
+                  <div class="py-2" >
+                      <p>16-02-2022 - 20-06-2023</p>
+                  <p>The art of living</p>
+                  </div>
+                  <h5 class="text-2xl font-bold leading-normal">Card title</h5>
+                  <p class="text-2xl font-light">Some quick example</p>
+                </div>
+                <div class="flex gap-2 wrap">
+                    <span class="rounded-3xl py-1 px-3 border border-gray-200">lorem</span>
+                    <span class="rounded-3xl py-1 px-3 border border-gray-200">impsum </span>
+                    <span class="rounded-3xl py-1 px-3 border border-gray-200">inosom it</span>
+                    <span class="rounded-3xl py-1 px-3 border border-gray-200">inosom it</span>
+                    <span class="rounded-3xl py-1 px-3 border border-gray-200">inosom it</span>
+                </div>
+            </div>
+            <div class="swiper-slide md:w-1/3 w-full mx-auto duration-500">
+                <!-- Fourth slide content -->
+                <div class="relative bg-cover bg-no-repeat border border-gray-200">
+                  <img class="hover:hue-rotate-180" src="https://img.freepik.com/free-photo/halftone-monochrome-collage_23-2151005006.jpg?t=st=1710930168~exp=1710933768~hmac=c16012363b770368178f4c87d8fc1f690ac72006a33039decb8e6b796765c984&w=740" alt="" />
+                </div>
+                <div class="py-6 text-surface hover:text-blue-600 transition duration-500 flex flex-col">
+                  <div class="py-2" >
+                      <p>16-02-2022 - 20-06-2023</p>
+                  <p>The art of living</p>
+                  </div>
+                  <h5 class="text-2xl font-bold leading-normal">Card title</h5>
+                  <p class="text-2xl font-light">Some quick example</p>
+                </div>
+                <div class="flex gap-2 wrap">
+                    <span class="rounded-3xl py-1 px-3 border border-gray-200">lorem</span>
+                    <span class="rounded-3xl py-1 px-3 border border-gray-200">impsum </span>
+                    <span class="rounded-3xl py-1 px-3 border border-gray-200">inosom it</span>
+                    <span class="rounded-3xl py-1 px-3 border border-gray-200">inosom it</span>
+                </div>
+            </div>
+            <div class="swiper-slide md:w-1/3 w-full mx-auto duration-500">
+                <!-- Firth slide content -->
+                <div class="relative bg-cover bg-no-repeat border border-gray-200">
+                  <img class="hover:hue-rotate-180" src="https://img.freepik.com/free-photo/creative-light-bulb-abstract-glowing-blue-background-generative-ai_188544-8090.jpg?t=st=1710930233~exp=1710933833~hmac=6221aeaaa6c405c50ce4022f46c8bb5068702fc78fe2e295aacbce7c0208ca2a&w=360" alt="" />
+                </div>
+                <div class="py-6 text-surface hover:text-blue-600 transition duration-500 flex flex-col">
+                  <div class="py-2" >
+                      <p>16-02-2022 - 20-06-2023</p>
+                  <p>The art of living</p>
+                  </div>
+                  <h5 class="text-2xl font-bold leading-normal">Card title</h5>
+                  <p class="text-2xl font-light">Some quick example</p>
+                </div>
+                <div class="flex gap-2 wrap">
+                  <span class="rounded-3xl py-1 px-3 border border-gray-200">lorem</span>
+                  <span class="rounded-3xl py-1 px-3 border border-gray-200">impsum </span>
+                  <span class="rounded-3xl py-1 px-3 border border-gray-200">inosom it</span>
+                </div>
+            </div>
+            <div class="swiper-slide md:w-1/3 w-full mx-auto duration-500">
+                <!-- Firth slide content -->
+                <div class="relative bg-cover bg-no-repeat border border-gray-200">
+                  <img class="hover:hue-rotate-180" src="https://img.freepik.com/free-photo/cubist-illustration-malaga_23-2150159191.jpg?t=st=1710930600~exp=1710934200~hmac=acd9521ffeec1fad47b0555c9364ce132453ba790b43e1c574b353987bbaee3a&w=360" alt="" />
+                </div>
+                <div class="py-6 text-surface hover:text-blue-600 transition duration-500 flex flex-col">
+                  <div class="py-2" >
+                      <p>16-02-2022 - 20-06-2023</p>
+                  <p>The art of living</p>
+                  </div>
+                  <h5 class="text-2xl font-bold leading-normal">Card title</h5>
+                  <p class="text-2xl font-light">Some quick example</p>
+                </div>
+                <div class="flex gap-2">
+                  <span class="rounded-3xl py-1 px-3 border border-gray-200">lorem</span>
+                  <span class="rounded-3xl py-1 px-3 border border-gray-200">impsum </span>
+                  <span class="rounded-3xl py-1 px-3 border border-gray-200">inosom it</span>
+                </div>
+            </div>
+            <!-- Add more slides as needed -->
+          </div>
+        </div>
+      </section>
+      <!-- Feature Heading section -->
+      <section class="px-[3%] py-10">
+        <h2 class="md:text-4xl text-2xl font-semibold text-blue-600 py-10">Lorem ipsum dolor sit amet.</h2>
+        <div class="">
+            <div class="py-2 transition duration-500 border-b-2 border-gray-100 bg-white text-black hover:text-white hover:bg-blue-600">
+                <h3 class="md:text-3xl text-2xl font-semibold">Interactive Galleries</h3>
+                <p class="md:text-2xl text-xl font-light">Implement interactive galleries that allow users to navigate through artwork easily.</p>
+            </div>
+            <div class="py-2 transition duration-500 border-b-2 border-gray-100 bg-white text-black hover:text-white hover:bg-blue-600">
+                <h3 class="md:text-3xl text-2xl font-semibold">Augmented Reality (AR) Integration</h3>
+                <p class="md:text-2xl text-xl font-light">Allow users to visualize artwork in their own space using AR technology.</p>
+            </div>
+            <div class="py-2 transition duration-500 border-b-2 border-gray-100 bg-white text-black hover:text-white hover:bg-blue-600">
+                <h3 class="md:text-3xl text-2xl font-semibold">Artwork Customization</h3>
+                <p class="md:text-2xl text-xl font-light">Offer customization options for artwork such as frame selection, size variations, or color adjustments. </p>
+            </div>
+            <div class="py-2 transition duration-500 border-b-2 border-gray-100 bg-white text-black hover:text-white hover:bg-blue-600">
+                <h3 class="md:text-3xl text-2xl font-semibold">Artwork Authentication and Certificates</h3>
+                <p class="md:text-2xl text-xl font-light">mplement a system for verifying the authenticity of artwork and providing digital certificates of authenticity. This adds credibility and trust to the artwork being sold on the website.</p>
+            </div>
+            <div class="py-2 transition duration-500 border-b-2 border-gray-100 bg-white text-black hover:text-white hover:bg-blue-600">
+                <h3 class="md:text-3xl text-2xl font-semibold">Artwork Search by Style or Medium</h3>
+                <p class="md:text-2xl text-xl font-light"> Implement advanced search filters that allow users to search for artwork based on specific styles, mediums, colors, or themes.</p>
+            </div>
+        </div>
+      </section>
+</body>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        loop: true, // Infinite loop
+      });
+    });
+  </script>
+</html>
