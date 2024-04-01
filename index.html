@@ -34,28 +34,29 @@
     }
     .top-bar{
       border-top: 5px solid#ffa500;
-      width: 5%;
+      width: 10%;
+      /* height: 10px; */
       padding-bottom: 10px;
     }
 </style>
 <body class="bg-white relative">
     <!-- Pop Modal -->
-        <div class="modal fixed z-30 overflow-y-auto bg-black/10 shadow-lg backdrop-blur-sm p-4 size-full flex justify-center items-center">
-        <div class="shadow-lg shadow-secondary-1 bg-white w-[45%] rounded-2xl mx-auto min-h-[50vh] flex items-center justify-center relative">
+        <div class="modal-wrapper fixed z-30 overflow-hidden bg-black/10 shadow-lg backdrop-blur-sm p-4 size-full flex justify-center items-center">
+        <div class="modal shadow-secondary-1 bg-white md:w-[45%] w-full rounded-2xl md:mx-auto mx-[2%] min-h-[50vh] flex items-center justify-center relative">
            <button class="close-modal">
             <svg class="absolute top-5 left-5" width="20" height="20" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 13L13 1M1 1L13 13" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
            </button>            
-          <div class="p-12 text-center flex flex-col gap-8">
+          <div class="md:p-12 p-6 text-center flex flex-col gap-8">
             <svg class="w-16 h-16 mx-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M21.75 9V9.906C21.75 10.3122 21.64 10.7109 21.4318 11.0597C21.2235 11.4085 20.9247 11.6944 20.567 11.887L14.089 15.375M2.25 9V9.906C2.24998 10.3122 2.35995 10.7109 2.56824 11.0597C2.77652 11.4085 3.07534 11.6944 3.433 11.887L9.911 15.375M9.911 15.375L10.933 14.825C11.2609 14.6484 11.6275 14.5559 12 14.5559C12.3725 14.5559 12.7391 14.6484 13.067 14.825L14.09 15.375L18.75 17.885M9.911 15.375L5.25 17.885M21.75 19.5C21.75 20.0967 21.5129 20.669 21.091 21.091C20.669 21.513 20.0967 21.75 19.5 21.75H4.5C3.90326 21.75 3.33097 21.513 2.90901 21.091C2.48705 20.669 2.25 20.0967 2.25 19.5V8.844C2.24998 8.43777 2.35995 8.0391 2.56824 7.69032C2.77652 7.34154 3.07534 7.05565 3.433 6.863L10.933 2.824C11.2609 2.64738 11.6275 2.55492 12 2.55492C12.3725 2.55492 12.7391 2.64738 13.067 2.824L20.567 6.863C20.9245 7.05557 21.2232 7.3413 21.4315 7.68989C21.6398 8.03848 21.7498 8.43694 21.75 8.84301V19.5Z" stroke="black" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M8.10085 11L7.10653 7.36364H7.55398L8.31392 10.3253H8.34943L9.12358 7.36364H9.62074L10.3949 10.3253H10.4304L11.1903 7.36364H11.6378L10.6435 11H10.1889L9.38636 8.10227H9.35795L8.5554 11H8.10085ZM13.0192 11.0568C12.7564 11.0568 12.5297 10.9988 12.3391 10.8828C12.1497 10.7656 12.0036 10.6023 11.9006 10.3928C11.7988 10.1821 11.7479 9.93703 11.7479 9.65767C11.7479 9.37831 11.7988 9.1321 11.9006 8.91903C12.0036 8.70478 12.1468 8.53788 12.3303 8.41832C12.5149 8.29759 12.7304 8.23722 12.9766 8.23722C13.1186 8.23722 13.2589 8.26089 13.3974 8.30824C13.5359 8.35559 13.6619 8.43253 13.7756 8.53906C13.8892 8.64441 13.9798 8.78409 14.0472 8.9581C14.1147 9.1321 14.1484 9.34635 14.1484 9.60085V9.77841H12.0462V9.41619H13.7223C13.7223 9.26231 13.6915 9.125 13.63 9.00426C13.5696 8.88352 13.4832 8.78823 13.3707 8.71839C13.2595 8.64856 13.1281 8.61364 12.9766 8.61364C12.8097 8.61364 12.6652 8.65507 12.5433 8.73793C12.4226 8.8196 12.3297 8.92614 12.2646 9.05753C12.1995 9.18892 12.1669 9.32978 12.1669 9.48011V9.72159C12.1669 9.92756 12.2024 10.1022 12.2734 10.2454C12.3456 10.3874 12.4457 10.4957 12.5735 10.5703C12.7013 10.6437 12.8499 10.6804 13.0192 10.6804C13.1293 10.6804 13.2287 10.665 13.3175 10.6342C13.4074 10.6023 13.485 10.5549 13.5501 10.4922C13.6152 10.4283 13.6655 10.349 13.701 10.2543L14.1058 10.3679C14.0632 10.5052 13.9916 10.6259 13.891 10.7301C13.7904 10.8331 13.6661 10.9136 13.5181 10.9716C13.3701 11.0284 13.2038 11.0568 13.0192 11.0568ZM14.8427 11V7.36364H15.2617V8.70597H15.2972C15.328 8.65862 15.3706 8.59825 15.4251 8.52486C15.4807 8.45028 15.56 8.384 15.663 8.32599C15.7672 8.26681 15.908 8.23722 16.0856 8.23722C16.3152 8.23722 16.5176 8.29463 16.6928 8.40945C16.868 8.52427 17.0047 8.68703 17.103 8.89773C17.2012 9.10843 17.2504 9.35701 17.2504 9.64347C17.2504 9.93229 17.2012 10.1826 17.103 10.3945C17.0047 10.6052 16.8686 10.7686 16.6946 10.8846C16.5206 10.9994 16.32 11.0568 16.0927 11.0568C15.9175 11.0568 15.7772 11.0278 15.6719 10.9698C15.5665 10.9106 15.4854 10.8437 15.4286 10.7692C15.3718 10.6934 15.328 10.6307 15.2972 10.581H15.2475V11H14.8427ZM15.2546 9.63636C15.2546 9.84233 15.2848 10.024 15.3452 10.1815C15.4055 10.3377 15.4937 10.4602 15.6097 10.549C15.7257 10.6366 15.8678 10.6804 16.0359 10.6804C16.2111 10.6804 16.3572 10.6342 16.4744 10.5419C16.5928 10.4484 16.6816 10.3229 16.7408 10.1655C16.8011 10.0069 16.8313 9.83049 16.8313 9.63636C16.8313 9.4446 16.8017 9.27178 16.7425 9.1179C16.6845 8.96283 16.5964 8.84032 16.478 8.75036C16.3608 8.65921 16.2134 8.61364 16.0359 8.61364C15.8654 8.61364 15.7222 8.65684 15.6062 8.74325C15.4902 8.82848 15.4026 8.94804 15.3434 9.10192C15.2842 9.25462 15.2546 9.43277 15.2546 9.63636Z" fill="black"/>
             </svg>
             
     
-            <h2 class="text-3xl md:text-5xl font-bold">Elevate Online Presence </h2>
-            <p class="text-lg md:text-xl">At Dhamu Tech, we understand that your website is more than just a digital platform</p>
+            <h2 class="text-2xl md:text-5xl font-bold">Elevate Online Presence </h2>
+            <p class="text-md md:text-xl">At Dhamu Tech, we understand that your website is more than just a digital platform</p>
             <div class="relative mt-2 rounded-md w-4/5 mx-auto">
               <input type="text" name="email" id="subscribe" class="block w-full rounded-2xl md:rounded-3xl md:p-5 p-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm md:text-xl sm:leading-6" placeholder="Enter Your Email">
               <div class="absolute inset-y-0 right-0 flex items-center">
@@ -68,10 +69,20 @@
         </div>
         <script>
             const closeModal = document.querySelector('.modal');
+            const modalWrapper = document.querySelector('.modal-wrapper');
+
+            // Close modal when clicking on the close button
             document.querySelector('.close-modal').addEventListener("click", function(){
-                closeModal.style.display= 'none';
+              modalWrapper.style.display= 'none';
             });
-            
+
+            // Close modal when clicking on the modal wrapper
+            modalWrapper.addEventListener("click", function(event) {
+                if (event.target === modalWrapper) {
+                  modalWrapper.style.display = 'none';
+                }
+            });
+
         </script>
         <!-- fixed login signup buttons -->
         <div class="fixed z-80 bottom-10 text-md right-10 font-semibold p-2 bg-white rounded-3xl flex gap-4 shadow-lg border border-gray-200">
@@ -117,7 +128,7 @@
               </svg>
   
             </div>
-            <div class="drop-menu duration-500 absolute md:static bg-white pb-6 md:pb-0 min-h-[85px] left-[-100%] top-[130px] flex w-full md:w-auto items-center">
+            <div class="drop-menu duration-500 absolute md:static bg-white pb-6 md:pb-0 min-h-[85px] left-[-100%] top-[85px] flex w-full md:w-auto items-center">
                 <ul class="flex flex-col md:flex-row md:items-center gap-4 w-full md:w-auto">
                     <li class="hover:bg-gray-50 hover:shadow-md transistion duration-700 md:rounded-lg pl-4 md:px-3 py-1"><a href="#">About</a></li>
                     <li class="hover:bg-gray-50 hover:shadow-md transistion duration-700 md:rounded-lg pl-4 md:px-3 py-1"><a href="#services">Services</a></li>
@@ -141,9 +152,6 @@
                 <svg class="icon close-icon h-8 w-8" style="display: none;" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M1 13L13 1M1 1L13 13" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-                <!-- <svg class="icon close-icon h-8 w-8" style="display: none;" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linejoin="round" stroke-width="1" d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z"></path>
-                </svg> -->
             </button>
             <script>
                 const toggleMenu = document.querySelector('.drop-menu');
@@ -180,27 +188,30 @@
     </section>
     <!-- section About us -->
     <section class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-full my-16">
-      <div class="max-w-[1340px] px-4 md:mx-auto py-16">
-        <div class="pb-16 text-center"><h2 class="text-3xl md:text-5xl font-semibold"><span class="top-bar">We Believe in...</span></h2></div>
-        <div class="grid grid-cols-2 md:grid-cols-4">
-          <div class="p-6 backdrop-blur-sm mx-4 bg-black/20">
-            <h2 class="text-7xl font-bold text-white leading-normal">01</h2>
-            <h3 class="text-2xl text-[#ffa500] font-semibold pb-4">Integrity</h3>
+      <div class="max-w-[1340px] px-4 md:mx-auto md:py-16 py-8">
+        <div class="md:pb-16 pb-8 text-center">
+          <div class="border-t-4 border-[#ffa500] pb-4 mx-auto md:w-[10%] w-[15%]"></div>
+          <h2 class="text-3xl md:text-5xl font-semibold">We Believe in...</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 md:gap-4 gap-2">
+          <div class="md:p-6 p-4 backdrop-blur-sm bg-black/20">
+            <h2 class="md:text-7xl text-5xl font-bold text-white leading-normal">01</h2>
+            <h3 class="md:text-2xl text-lg text-[#ffa500] font-semibold md:py-4 py-2">Integrity</h3>
             <p class="text-base text-white leading-normal">I care about doing things well, always.</p>
           </div>
-          <div class="p-6 backdrop-blur-sm mx-4 bg-black/20">
-            <h2 class="text-7xl font-bold text-white leading-normal">02</h2>
-            <h3 class="text-2xl text-[#ffa500] font-semibold pb-4">Quality Over Quantity</h3>
+          <div class="md:p-6 p-4 backdrop-blur-sm bg-black/20">
+            <h2 class="md:text-7xl text-5xl font-bold text-white leading-normal">02</h2>
+            <h3 class="md:text-2xl text-lg text-[#ffa500] font-semibold md:py-4 py-2">Quality Over Quantity</h3>
             <p class="text-base text-white leading-normal">You only need the pieces that will last.</p>
           </div>
-          <div class="p-6 backdrop-blur-sm mx-4 bg-black/20">
-            <h2 class="text-7xl font-bold text-white leading-normal">03</h2>
-            <h3 class="text-2xl text-[#ffa500] font-semibold pb-4">Collaboration</h3>
+          <div class="md:p-6 p-4 backdrop-blur-sm bg-black/20">
+            <h2 class="md:text-7xl text-5xl font-bold text-white leading-normal">03</h2>
+            <h3 class="md:text-2xl text-lg text-[#ffa500] font-semibold md:py-4 py-2">Collaboration</h3>
             <p class="text-base text-white leading-normal">Crafting your image is a partnership and a privilege. We'll help you become who you dream of being.</p>
           </div>
-          <div class="p-6 backdrop-blur-sm mx-4 bg-black/20">
-            <h2 class="text-7xl font-bold text-white leading-normal">04</h2>
-            <h3 class="text-2xl text-[#ffa500] font-semibold pb-4">Forward-Thinking</h3>
+          <div class="md:p-6 p-4 backdrop-blur-sm bg-black/20">
+            <h2 class="md:text-7xl text-5xl font-bold text-white leading-normal">04</h2>
+            <h3 class="md:text-2xl text-lg text-[#ffa500] font-semibold md:py-4 py-2">Forward-Thinking</h3>
             <p class="text-base text-white leading-normal">Always evaluate where you are, where you need to be, and the path to getting there.</p>
           </div>
         </div>
@@ -210,8 +221,9 @@
     <section id="about" class="max-w-[1340px] px-4 md:mx-auto text-center">
       
         <img class="rounded-3xl mx-auto w-full" src="hero.svg" alt="">
-        <div class="py-10 md:py-20 flex flex-col gap-6 w-4/5 md:w-3/5 mx-auto">
-            <h2 class="text-3xl md:text-5xl font-semibold leading-tight"><span class="top-bar">Services We serve</span></h2>
+        <div class="py-10 md:py-20 flex flex-col gap-4 w-4/5 md:w-3/5 mx-auto">
+          <div class="border-t-4 border-[#ffa500] mx-auto md:w-[15%] w-[20%]"></div>
+            <h2 class="text-3xl md:text-5xl font-semibold leading-tight">Services We serve</h2>
             <p class="text-xl md:text-2xl leading-snug">Custom website design, Responsive design, E-commerce solutions, Website maintenance, SEO optimization, or graphic design etc.</p>
         </div>
     </section>
@@ -219,13 +231,14 @@
     <section id="services" class="max-w-[1340px] mx-4 md:mx-auto pt-6">
         <div class="flex flex-col md:flex-row px-4 mx-auto gap-2 justify-end gap-4">
             <div class="ring-1 ring-indigo-600 bg-center bg-no-repeat h-screen rounded-3xl mx-auto flex items-end w-full" style="background-image: url(development.svg)">
-                <p class="z-10 text-center text-4xl text-indigo-600 backdrop-blur-sm bg-white/20 rounded-3xl m-4 w-full font-bold md:p-10 shadow-lg">Web Developement Services</p>
+                <p class="z-10 text-center md:text-4xl text-2xl text-indigo-600 backdrop-blur-sm bg-white/20 rounded-3xl m-4 w-full font-bold md:p-10 shadow-lg">Web Developement Services</p>
             </div>
             <div class="ring-1 ring-indigo-600 bg-center bg-no-repeat h-screen rounded-3xl mx-auto flex items-end w-full" style="background-image: url(development-2.svg)">
-                <p class="z-10 text-center text-4xl text-indigo-600 backdrop-blur-sm bg-white/20 rounded-3xl m-4 w-full font-bold md:p-10 shadow-lg">Web Design Services</p>
+                <p class="z-10 text-center md:text-4xl text-2xl text-indigo-600 backdrop-blur-sm bg-white/20 rounded-3xl m-4 w-full font-bold md:p-10 shadow-lg">Web Design Services</p>
             </div>
         </div>
         <div class="py-10 md:py-20 flex flex-col gap-6 tw-4/5 md:w-3/5 mx-auto text-center">
+          <div class="border-t-4 border-[#ffa500] mx-auto md:w-[15%] w-[20%]"></div>
             <h2 class="text-3xl :text-5xl font-semibold leading-tight">My Showcase will <span class="cursive_text"> Help You</span></h2>
         <p class="text-xl md:text-2xl leading-snug">Specializing in web development, my showcase delivers impactful online solutions. Proficient in WordPress, Shopify, and Webflow, I craft bespoke websites that elevate your digital presence.</p>
         </div>
@@ -311,6 +324,7 @@
     <!-- CTA Section -->
     <section id="hire" class="w-full bg-gray-100 p-10 md:p-20 text-center text-black">
         <div class="w-4/5 md:w-2/3 mx-auto flex flex-col gap-6">
+          <div class="border-t-4 border-[#ffa500] mx-auto md:w-[15%] w-[20%]"></div>
             <h2 class="text-3xl md:text-5xl font-semibold">Let's talk to get started</h2>
             <p class="text-xl md:text-2xl font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ratione nesciunt dolorem tempore neque aliquid, quidem at consequuntur. Obcaecati, voluptate.</p>
             <div>
