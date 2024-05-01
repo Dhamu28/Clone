@@ -21,23 +21,28 @@
         width: 0;
       }
     }
-    .animate-typing::after {
-      content: "|";
-      animation: typing 1s steps(1) infinite alternate;
-    }
-    .typed-string {
-      display: inline-block;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: .15em solid #ffa500; /* Change color as needed */
-      animation: typing 2s steps(30) infinite;
-    }
-    .top-bar{
-      border-top: 5px solid#ffa500;
-      width: 10%;
-      /* height: 10px; */
-      padding-bottom: 10px;
-    }
+.animate-typing::after {
+  content: "|";
+  animation: typing 1s steps(1) infinite alternate;
+}
+.typed-string {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: .15em solid #ffa500; /* Change color as needed */
+  animation: typing 2s steps(30) infinite;
+}
+.top-bar{
+  border-top: 5px solid#ffa500;
+  width: 10%;
+  /* height: 10px; */
+  padding-bottom: 10px;
+}
+.bg-blog{
+    background-image: url('blog.svg');
+    background-position: left;
+    background-repeat: no-repeat;
+}
 </style>
 <body class="bg-white relative">
     <!-- Pop Modal -->
@@ -176,7 +181,7 @@
     </header>
     <!-- hero section -->
     <section class="max-w-[1340px] mx-4 md:mx-auto pt-16 md:pt-32">
-        <div class="flex flex-col justify-between items-center">
+        <div class="flex flex-col justify-between items-center bg-blob">
            <h1 class="text-5xl md:text-7xl text-black cursive_text">Meet Your New</h1> 
            <h1 class="text-5xl md:text-7xl text-black font-semibold leading-normal py-3"><span id="typedString" class="typed-string"></span></h1>
            <div class="flex gap-4 pt-10">
@@ -191,7 +196,7 @@
       <div class="max-w-[1340px] px-4 md:mx-auto md:py-16 py-8">
         <div class="md:pb-16 pb-8 text-center">
           <div class="border-t-4 border-[#ffa500] pb-4 mx-auto md:w-[10%] w-[15%]"></div>
-          <h2 class="text-3xl md:text-5xl font-semibold">We Believe in...</h2>
+          <h2 class="text-3xl md:text-5xl text-white font-semibold">We Believe in...</h2>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 md:gap-4 gap-2">
           <div class="md:p-6 p-4 backdrop-blur-sm bg-black/20">
@@ -223,7 +228,7 @@
         <img class="rounded-3xl mx-auto w-full" src="hero.svg" alt="">
         <div class="py-10 md:py-20 flex flex-col gap-4 w-4/5 md:w-3/5 mx-auto">
           <div class="border-t-4 border-[#ffa500] mx-auto md:w-[15%] w-[20%]"></div>
-            <h2 class="text-3xl md:text-5xl font-semibold leading-tight">Services We serve</h2>
+            <h2 class="text-3xl md:text-5xl font-semibold leading-tight">Services We Offer</h2>
             <p class="text-xl md:text-2xl leading-snug">Custom website design, Responsive design, E-commerce solutions, Website maintenance, SEO optimization, or graphic design etc.</p>
         </div>
     </section>
@@ -236,6 +241,17 @@
             <div class="ring-1 ring-indigo-600 bg-center bg-no-repeat h-screen rounded-3xl mx-auto flex items-end w-full" style="background-image: url(development-2.svg)">
                 <p class="z-10 text-center md:text-4xl text-2xl text-indigo-600 backdrop-blur-sm bg-white/20 rounded-3xl m-4 w-full font-bold md:p-10 shadow-lg">Web Design Services</p>
             </div>
+        </div>
+        <div class="flex justify-around flex-wrap gap-6 pt-8">
+            <div class=" md:text-4xl text-2xl text-red-600 bg-white/20 rounded-xl font-bold md:p-5 shadow-lg">WORDPRESS</div>
+            <div class=" md:text-4xl text-2xl text-indigo-600 bg-white/20 rounded-xl font-bold md:p-5 shadow-lg">JAVA SCRIPT</div>
+            <div class=" md:text-4xl text-2xl text-orange-600 bg-white/20 rounded-xl font-bold md:p-5 shadow-lg">TAILWIND</div>
+            <div class=" md:text-4xl text-2xl text-lime-600 bg-white/20 rounded-xl font-bold md:p-5 shadow-lg">BOOTSTRAP</div>
+            <div class=" md:text-4xl text-2xl text-amber-600 bg-white/20 rounded-xl font-bold md:p-5 shadow-lg">WEBFLOW</div>
+            <div class=" md:text-4xl text-2xl text-fuchsia-600 bg-white/20 rounded-xl font-bold md:p-5 shadow-lg">SHOPIFY</div>
+            <div class=" md:text-4xl text-2xl text-green-600 bg-white/20 rounded-xl font-bold md:p-5 shadow-lg">HTML</div>
+            <div class=" md:text-4xl text-2xl text-pink-600 bg-white/20 rounded-xl font-bold md:p-5 shadow-lg">CSS</div>
+            <div class=" md:text-4xl text-2xl text-blue-600 bg-white/20 rounded-xl font-bold md:p-5 shadow-lg">PHP</div>
         </div>
         <div class="py-10 md:py-20 flex flex-col gap-6 tw-4/5 md:w-3/5 mx-auto text-center">
           <div class="border-t-4 border-[#ffa500] mx-auto md:w-[15%] w-[20%]"></div>
