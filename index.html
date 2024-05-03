@@ -38,10 +38,25 @@
   /* height: 10px; */
   padding-bottom: 10px;
 }
-.bg-blog{
-    background-image: url('blog.svg');
-    background-position: left;
+.bg-blob{
+    background-image: url(bg.svg);
+    /* background-origin: content-box; */
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: white; */
+}
+.features_box{
+  border-radius: 23px;
+background: linear-gradient(145deg, #cacaca, #f0f0f0);
+box-shadow:  15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff;
+}
+.skill{
+  border-radius: 10px;
+  background: #e0e0e0;
+  box-shadow: inset 5px 5px 10px #bebebe,
+            inset 1px 1px 1px #ffffff;
 }
 </style>
 <body class="bg-white relative">
@@ -62,7 +77,7 @@
     
             <h2 class="text-2xl md:text-5xl font-bold">Elevate Online Presence </h2>
             <p class="text-md md:text-xl">At Dhamu Tech, we understand that your website is more than just a digital platform</p>
-            <div class="relative mt-2 rounded-md w-4/5 mx-auto">
+            <div class="relative mt-2 w-4/5 mx-auto features_box">
               <input type="text" name="email" id="subscribe" class="block w-full rounded-2xl md:rounded-3xl md:p-5 p-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm md:text-xl sm:leading-6" placeholder="Enter Your Email">
               <div class="absolute inset-y-0 right-0 flex items-center">
                 <button class="bg-black text-white rounded-2xl px-4 md:py-3 me-2 hidden md:block font-semibold" type="submit"><a href="mailto:sutharjugalk@gmail.com">Let's Start</a></button>
@@ -180,8 +195,8 @@
         </nav>
     </header>
     <!-- hero section -->
-    <section class="max-w-[1340px] mx-4 md:mx-auto pt-16 md:pt-32">
-        <div class="flex flex-col justify-between items-center bg-blob">
+    <section class="bg-blob mx-4 md:mx-auto py-16 md:pt-32">
+        <div class="flex flex-col justify-between  items-center">
            <h1 class="text-5xl md:text-7xl text-black cursive_text">Meet Your New</h1> 
            <h1 class="text-5xl md:text-7xl text-black font-semibold leading-normal py-3"><span id="typedString" class="typed-string"></span></h1>
            <div class="flex gap-4 pt-10">
@@ -192,7 +207,7 @@
         <!-- <h1></h1> -->
     </section>
     <!-- section About us -->
-    <section class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-full my-16">
+    <section class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-full">
       <div class="max-w-[1340px] px-4 md:mx-auto md:py-16 py-8">
         <div class="md:pb-16 pb-8 text-center">
           <div class="border-t-4 border-[#ffa500] pb-4 mx-auto md:w-[10%] w-[15%]"></div>
@@ -228,7 +243,7 @@
         <img class="rounded-3xl mx-auto w-full" src="hero.svg" alt="">
         <div class="py-10 md:py-20 flex flex-col gap-4 w-4/5 md:w-3/5 mx-auto">
           <div class="border-t-4 border-[#ffa500] mx-auto md:w-[15%] w-[20%]"></div>
-            <h2 class="text-3xl md:text-5xl font-semibold leading-tight">Services We Offer</h2>
+            <h2 class="text-3xl md:text-5xl font-semibold leading-tight">Services We <span class="cursive_text"> Offer </span></h2>
             <p class="text-xl md:text-2xl leading-snug">Custom website design, Responsive design, E-commerce solutions, Website maintenance, SEO optimization, or graphic design etc.</p>
         </div>
     </section>
@@ -242,20 +257,24 @@
                 <p class="z-10 text-center md:text-4xl text-2xl text-indigo-600 backdrop-blur-sm bg-white/20 rounded-3xl m-4 w-full font-bold md:p-10 shadow-lg">Web Design Services</p>
             </div>
         </div>
+        <div class="text-center pt-16 pb-10">
+          <div class="border-t-4 border-[#ffa500] mx-auto md:w-[15%] w-[20%]"></div>
+          <h2 class="text-3xl md:text-5xl font-semibold leading-tight">My <span class="cursive_text"> Skills </span></h2>
+        </div>
         <div class="flex justify-around flex-wrap gap-6 pt-8">
-            <div class=" md:text-4xl text-2xl text-red-600 bg-white/20 rounded-xl font-bold md:p-5 shadow-lg">WORDPRESS</div>
-            <div class=" md:text-4xl text-2xl text-indigo-600 bg-white/20 rounded-xl font-bold md:p-5 shadow-lg">JAVA SCRIPT</div>
-            <div class=" md:text-4xl text-2xl text-orange-600 bg-white/20 rounded-xl font-bold md:p-5 shadow-lg">TAILWIND</div>
-            <div class=" md:text-4xl text-2xl text-lime-600 bg-white/20 rounded-xl font-bold md:p-5 shadow-lg">BOOTSTRAP</div>
-            <div class=" md:text-4xl text-2xl text-amber-600 bg-white/20 rounded-xl font-bold md:p-5 shadow-lg">WEBFLOW</div>
-            <div class=" md:text-4xl text-2xl text-fuchsia-600 bg-white/20 rounded-xl font-bold md:p-5 shadow-lg">SHOPIFY</div>
-            <div class=" md:text-4xl text-2xl text-green-600 bg-white/20 rounded-xl font-bold md:p-5 shadow-lg">HTML</div>
-            <div class=" md:text-4xl text-2xl text-pink-600 bg-white/20 rounded-xl font-bold md:p-5 shadow-lg">CSS</div>
-            <div class=" md:text-4xl text-2xl text-blue-600 bg-white/20 rounded-xl font-bold md:p-5 shadow-lg">PHP</div>
+            <div class="skill md:text-4xl text-2xl text-red-600 bg-white/20 font-bold md:p-5">WORDPRESS</div>
+            <div class="skill md:text-4xl text-2xl text-indigo-600 bg-white/20 font-bold md:p-5">JAVA SCRIPT</div>
+            <div class="skill md:text-4xl text-2xl text-orange-600 bg-white/20 font-bold md:p-5">TAILWIND</div>
+            <div class="skill md:text-4xl text-2xl text-lime-600 bg-white/20 font-bold md:p-5">BOOTSTRAP</div>
+            <div class="skill md:text-4xl text-2xl text-amber-600 bg-white/20 font-bold md:p-5">WEBFLOW</div>
+            <div class="skill md:text-4xl text-2xl text-fuchsia-600 bg-white/20 font-bold md:p-5">SHOPIFY</div>
+            <div class="skill md:text-4xl text-2xl text-green-600 bg-white/20 font-bold md:p-5">HTML</div>
+            <div class="skill md:text-4xl text-2xl text-pink-600 bg-white/20 font-bold md:p-5">CSS</div>
+            <div class="skill md:text-4xl text-2xl text-blue-600 bg-white/20 font-bold md:p-5">PHP</div>
         </div>
         <div class="py-10 md:py-20 flex flex-col gap-6 tw-4/5 md:w-3/5 mx-auto text-center">
           <div class="border-t-4 border-[#ffa500] mx-auto md:w-[15%] w-[20%]"></div>
-            <h2 class="text-3xl :text-5xl font-semibold leading-tight">My Showcase will <span class="cursive_text"> Help You</span></h2>
+          <h2 class="text-3xl md:text-5xl font-semibold leading-tight">My Showcase will <span class="cursive_text"> Help You</span></span></h2>
         <p class="text-xl md:text-2xl leading-snug">Specializing in web development, my showcase delivers impactful online solutions. Proficient in WordPress, Shopify, and Webflow, I craft bespoke websites that elevate your digital presence.</p>
         </div>
     </section>
@@ -323,7 +342,7 @@
                   <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
                 </a>
               </div>
-              <div class="py-8 md:py-10 text-white bg-pink-800 rounded-b-3xl text-center">
+              <div class="py-8 md:py-10 text-white bg-blue-800 rounded-b-3xl text-center">
                 <h5 class="text-3xl md:text-5xl font-bold leading-normal">Webflow</h5>
                 <button class="bg-black rounded-xl mt-6 text-white px-6 py-2"><a href="https://www.resilientliving.net/">Feel Reality</a></button>
               </div>
@@ -341,10 +360,10 @@
     <section id="hire" class="w-full bg-gray-100 p-10 md:p-20 text-center text-black">
         <div class="w-4/5 md:w-2/3 mx-auto flex flex-col gap-6">
           <div class="border-t-4 border-[#ffa500] mx-auto md:w-[15%] w-[20%]"></div>
-            <h2 class="text-3xl md:text-5xl font-semibold">Let's talk to get started</h2>
-            <p class="text-xl md:text-2xl font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ratione nesciunt dolorem tempore neque aliquid, quidem at consequuntur. Obcaecati, voluptate.</p>
+            <h2 class="text-3xl md:text-5xl font-semibold">Let's talk to <span class="cursive_text"> Get Started</span></h2>
+            <p class="text-xl md:text-2xl font-light">At Dhamu Tech, we understand that your website is more than just a digital platform. So connect with me to discuss on your winning product.</p>
             <div>
-                <div class="relative mt-2 rounded-md shadow-sm md:w-3/5 w-full mx-auto">
+                <div class="relative mt-2  md:w-3/5 w-full mx-auto features_box">
                   <input type="text" name="email" id="subscribe" class="block w-full rounded-2xl bg-gray-100 md:rounded-3xl md:p-5 p-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm md:text-xl sm:leading-6" placeholder="Enter Your Email">
                   <div class="absolute inset-y-0 right-0 flex items-center z-1">
                     <button class="bg-black text-white rounded-2xl px-4 md:py-3 me-2 hidden md:block font-semibold" type="submit">Book A Demo</button>
