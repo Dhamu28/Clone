@@ -58,6 +58,11 @@ box-shadow:  15px 15px 30px #bebebe,
   box-shadow: inset 5px 5px 10px #bebebe,
             inset 1px 1px 1px #ffffff;
 }
+.cta-bg{
+  background-image: url('ctaa-bg.jpg');
+  background-position: center;
+  background-size: cover;
+}
 </style>
 <body class="bg-white relative">
     <!-- Pop Modal -->
@@ -196,7 +201,7 @@ box-shadow:  15px 15px 30px #bebebe,
     </header>
     <!-- hero section -->
     <section class="bg-blob mx-4 md:mx-auto py-16 md:pt-32">
-        <div class="flex flex-col justify-between  items-center">
+        <div class="flex flex-col justify-between items-center">
            <h1 class="text-5xl md:text-7xl text-black cursive_text">Meet Your New</h1> 
            <h1 class="text-5xl md:text-7xl text-black font-semibold leading-normal py-3"><span id="typedString" class="typed-string"></span></h1>
            <div class="flex gap-4 pt-10">
@@ -207,29 +212,29 @@ box-shadow:  15px 15px 30px #bebebe,
         <!-- <h1></h1> -->
     </section>
     <!-- section About us -->
-    <section class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-full">
+    <section class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-full mt-10">
       <div class="max-w-[1340px] px-4 md:mx-auto md:py-16 py-8">
         <div class="md:pb-16 pb-8 text-center">
           <div class="border-t-4 border-[#ffa500] pb-4 mx-auto md:w-[10%] w-[15%]"></div>
-          <h2 class="text-3xl md:text-5xl text-white font-semibold">We Believe in...</h2>
+          <h2 class="text-3xl md:text-5xl text-white font-semibold">We Believe <span class="cursive_text">In...</span> </h2>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 md:gap-4 gap-2">
-          <div class="md:p-6 p-4 backdrop-blur-sm bg-black/20">
+          <div class="md:p-6 p-4 backdrop-blur-sm bg-white/10 md:rounded-s-3xl rounded-tl-3xl">
             <h2 class="md:text-7xl text-5xl font-bold text-white leading-normal">01</h2>
             <h3 class="md:text-2xl text-lg text-[#ffa500] font-semibold md:py-4 py-2">Integrity</h3>
             <p class="text-base text-white leading-normal">I care about doing things well, always.</p>
           </div>
-          <div class="md:p-6 p-4 backdrop-blur-sm bg-black/20">
+          <div class="md:p-6 p-4 backdrop-blur-sm bg-white/10 md:rounded-tr-none rounded-tr-3xl">
             <h2 class="md:text-7xl text-5xl font-bold text-white leading-normal">02</h2>
             <h3 class="md:text-2xl text-lg text-[#ffa500] font-semibold md:py-4 py-2">Quality Over Quantity</h3>
             <p class="text-base text-white leading-normal">You only need the pieces that will last.</p>
           </div>
-          <div class="md:p-6 p-4 backdrop-blur-sm bg-black/20">
+          <div class="md:p-6 p-4 backdrop-blur-sm bg-white/10 md:rounded-bl-none rounded-bl-3xl">
             <h2 class="md:text-7xl text-5xl font-bold text-white leading-normal">03</h2>
             <h3 class="md:text-2xl text-lg text-[#ffa500] font-semibold md:py-4 py-2">Collaboration</h3>
             <p class="text-base text-white leading-normal">Crafting your image is a partnership and a privilege. We'll help you become who you dream of being.</p>
           </div>
-          <div class="md:p-6 p-4 backdrop-blur-sm bg-black/20">
+          <div class="md:p-6 p-4 backdrop-blur-sm bg-white/10 md:rounded-e-3xl rounded-br-3xl">
             <h2 class="md:text-7xl text-5xl font-bold text-white leading-normal">04</h2>
             <h3 class="md:text-2xl text-lg text-[#ffa500] font-semibold md:py-4 py-2">Forward-Thinking</h3>
             <p class="text-base text-white leading-normal">Always evaluate where you are, where you need to be, and the path to getting there.</p>
@@ -250,28 +255,34 @@ box-shadow:  15px 15px 30px #bebebe,
     <!-- Section 50-50 box with hover text -->
     <section id="services" class="max-w-[1340px] mx-4 md:mx-auto pt-6">
         <div class="flex flex-col md:flex-row px-4 mx-auto gap-2 justify-end gap-4">
-            <div class="ring-1 ring-indigo-600 bg-center bg-no-repeat h-screen rounded-3xl mx-auto flex items-end w-full" style="background-image: url(development.svg)">
-                <p class="z-10 text-center md:text-4xl text-2xl text-indigo-600 backdrop-blur-sm bg-white/20 rounded-3xl m-4 w-full font-bold md:p-10 shadow-lg">Web Developement Services</p>
+            <div class="ring-1 ring-indigo-600 bg-center bg-no-repeat md:h-screen h-80 rounded-3xl mx-auto flex items-end w-full" style="background-image: url(development.svg)">
+                <p class="z-10 text-center md:text-4xl text-2xl text-[#ffa500] backdrop-blur-sm bg-white/20 rounded-3xl m-4 w-full font-bold md:p-10 p-5 shadow-lg">Web Developement Services</p>
             </div>
-            <div class="ring-1 ring-indigo-600 bg-center bg-no-repeat h-screen rounded-3xl mx-auto flex items-end w-full" style="background-image: url(development-2.svg)">
-                <p class="z-10 text-center md:text-4xl text-2xl text-indigo-600 backdrop-blur-sm bg-white/20 rounded-3xl m-4 w-full font-bold md:p-10 shadow-lg">Web Design Services</p>
+            <div class="ring-1 ring-indigo-600 bg-center bg-no-repeat md:h-screen h-80 rounded-3xl mx-auto flex items-end w-full" style="background-image: url(development-2.svg)">
+                <p class="z-10 text-center md:text-4xl text-2xl text-[#ffa500] backdrop-blur-sm bg-white/20 rounded-3xl m-4 w-full font-bold md:p-10 p-5 shadow-lg">Web Design Services</p>
             </div>
         </div>
-        <div class="text-center pt-16 pb-10">
+        <div class="text-center pt-16 pb-10 gap-4 flex flex-col">
           <div class="border-t-4 border-[#ffa500] mx-auto md:w-[15%] w-[20%]"></div>
           <h2 class="text-3xl md:text-5xl font-semibold leading-tight">My <span class="cursive_text"> Skills </span></h2>
         </div>
-        <div class="flex justify-around flex-wrap gap-6 pt-8">
-            <div class="skill md:text-4xl text-2xl text-red-600 bg-white/20 font-bold md:p-5">WORDPRESS</div>
-            <div class="skill md:text-4xl text-2xl text-indigo-600 bg-white/20 font-bold md:p-5">JAVA SCRIPT</div>
-            <div class="skill md:text-4xl text-2xl text-orange-600 bg-white/20 font-bold md:p-5">TAILWIND</div>
-            <div class="skill md:text-4xl text-2xl text-lime-600 bg-white/20 font-bold md:p-5">BOOTSTRAP</div>
-            <div class="skill md:text-4xl text-2xl text-amber-600 bg-white/20 font-bold md:p-5">WEBFLOW</div>
-            <div class="skill md:text-4xl text-2xl text-fuchsia-600 bg-white/20 font-bold md:p-5">SHOPIFY</div>
-            <div class="skill md:text-4xl text-2xl text-green-600 bg-white/20 font-bold md:p-5">HTML</div>
-            <div class="skill md:text-4xl text-2xl text-pink-600 bg-white/20 font-bold md:p-5">CSS</div>
-            <div class="skill md:text-4xl text-2xl text-blue-600 bg-white/20 font-bold md:p-5">PHP</div>
+        <div class="flex md:flex-row flex-col gap-2">
+          <div class="flex justify-around flex-wrap gap-6 pt-8 md:w-1/2 w-full">
+            <div class="skill md:text-4xl text-2xl text-green-600 bg-white/20 font-bold md:p-5 p-2">HTML</div>
+            <div class="skill md:text-4xl text-2xl text-pink-600 bg-white/20 font-bold md:p-5 p-2">CSS</div>
+            <div class="skill md:text-4xl text-2xl text-blue-600 bg-white/20 font-bold md:p-5 p-2">PHP</div>
+            <div class="skill md:text-4xl text-2xl text-red-600 bg-white/20 font-bold md:p-5 p-2">WORDPRESS</div>
+            <div class="skill md:text-4xl text-2xl text-amber-600 bg-white/20 font-bold md:p-5 p-2">WEBFLOW</div>
+            <div class="skill md:text-4xl text-2xl text-fuchsia-600 bg-white/20 font-bold md:p-5 p-2">SHOPIFY</div>
+            <div class="skill md:text-4xl text-2xl text-indigo-600 bg-white/20 font-bold md:p-5 p-2">JAVA SCRIPT</div>
+            <div class="skill md:text-4xl text-2xl text-orange-600 bg-white/20 font-bold md:p-5 p-2">TAILWIND</div>
+            <div class="skill md:text-4xl text-2xl text-lime-600 bg-white/20 font-bold md:p-5 p-2">BOOTSTRAP</div>
+          </div>
+          <div class="md:w-1/2 w-full">
+            <img class="" src="develop.jpg">
+          </div>  
         </div>
+
         <div class="py-10 md:py-20 flex flex-col gap-6 tw-4/5 md:w-3/5 mx-auto text-center">
           <div class="border-t-4 border-[#ffa500] mx-auto md:w-[15%] w-[20%]"></div>
           <h2 class="text-3xl md:text-5xl font-semibold leading-tight">My Showcase will <span class="cursive_text"> Help You</span></span></h2>
@@ -279,7 +290,7 @@ box-shadow:  15px 15px 30px #bebebe,
         </div>
     </section>
     <!-- Carousel -->
-    <section id="portfolio" class="max-w-[1340px] mx-4 md:mx-auto pt-6 pb-20 overflow-hidden">
+    <section id="portfolio" class="max-w-[1340px] mx-4 md:mx-auto pt-6 md:pb-20 pb-8 overflow-hidden">
         <div class="swiper-container grid md:grid-cols-4 grid-cols-2">
           <div class="swiper-wrapper">
             <!-- First slide content -->
@@ -329,9 +340,9 @@ box-shadow:  15px 15px 30px #bebebe,
                   <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
                 </a>
               </div>
-              <div class="py-8 md:py-10 text-white bg-blue-800 rounded-b-3xl text-center">
+              <div class="py-8 md:py-10 text-white bg-pink-800 rounded-b-3xl text-center">
                 <h5 class="text-3xl md:text-5xl font-bold leading-normal">Webflow</h5>
-                <button class="bg-black rounded-xl mt-6 text-white px-6 py-2"><a href="https://www.amitsood.com/" target="_blank">Feel Reality</a></button>
+                <button class="bg-black rounded-xl mt-6 text-white px-6 py-2"><a href="https://www.resilientliving.net/">Feel Reality</a></button>
               </div>
             </div>
             <!-- Fifth slide content -->
@@ -344,7 +355,7 @@ box-shadow:  15px 15px 30px #bebebe,
               </div>
               <div class="py-8 md:py-10 text-white bg-blue-800 rounded-b-3xl text-center">
                 <h5 class="text-3xl md:text-5xl font-bold leading-normal">Webflow</h5>
-                <button class="bg-black rounded-xl mt-6 text-white px-6 py-2"><a href="https://www.resilientliving.net/">Feel Reality</a></button>
+                <button class="bg-black rounded-xl mt-6 text-white px-6 py-2"><a href="https://www.amitsood.com/" target="_blank">Feel Reality</a></button>
               </div>
             </div>
             <!-- Add more slides as needed -->
@@ -357,11 +368,11 @@ box-shadow:  15px 15px 30px #bebebe,
 
     </section>
     <!-- CTA Section -->
-    <section id="hire" class="w-full bg-gray-100 p-10 md:p-20 text-center text-black">
-        <div class="w-4/5 md:w-2/3 mx-auto flex flex-col gap-6">
+    <section id="hire" class="max-w-[1340px] mx-auto rounded-3xl cta-bg p-4 md:mb-20 mb-10 md:p-20 text-center text-black">
+        <div class="w-4/5 md:w-2/3 mx-auto flex flex-col gap-6 backdrop-blur-sm bg-white/10 p-8 rounded-3xl">
           <div class="border-t-4 border-[#ffa500] mx-auto md:w-[15%] w-[20%]"></div>
-            <h2 class="text-3xl md:text-5xl font-semibold">Let's talk to <span class="cursive_text"> Get Started</span></h2>
-            <p class="text-xl md:text-2xl font-light">At Dhamu Tech, we understand that your website is more than just a digital platform. So connect with me to discuss on your winning product.</p>
+            <h2 class="text-3xl md:text-5xl text-white font-semibold">Let's talk to <span class="cursive_text"> Get Started</span></h2>
+            <p class="text-xl md:text-2xl text-white font-light">At Dhamu Tech, we understand that your website is more than just a digital platform. So connect with me to discuss on your winning product.</p>
             <div>
                 <div class="relative mt-2  md:w-3/5 w-full mx-auto features_box">
                   <input type="text" name="email" id="subscribe" class="block w-full rounded-2xl bg-gray-100 md:rounded-3xl md:p-5 p-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm md:text-xl sm:leading-6" placeholder="Enter Your Email">
@@ -414,10 +425,10 @@ box-shadow:  15px 15px 30px #bebebe,
             </div>
             <div class="">
                 <ul>
-                    <li class=""><a href="">Footer Link</a></li>
-                    <li class=""><a href="">Footer Link</a></li>
-                    <li class=""><a href="">Footer Link</a></li>
-                    <li class=""><a href="">Footer Link</a></li>
+                    <li class=""><a href="#">About</a></li>
+                    <li class=""><a href="#services">Services</a></li>
+                    <li class=""><a href="#portfolio">Portfolio</a></li>
+                    <li class=""><a href="#hire">Work With Me</a></li>
                 </ul>
             </div>
             <div class="">
@@ -429,11 +440,50 @@ box-shadow:  15px 15px 30px #bebebe,
                 </ul>
             </div>
             <div class="">
-                <ul>
-                    <li class=""><a href="">Footer Link</a></li>
-                    <li class=""><a href="">Footer Link</a></li>
-                    <li class=""><a href="">Footer Link</a></li>
-                    <li class=""><a href="">Footer Link</a></li>
+              <h2 class="text-2xl">Social Connections</h2>
+                <ul class="flex gap-4 pt-6">
+                  <a href="#!" role="button">
+                    <!-- Facebook -->
+                    <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#1877f2]">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path
+                          d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                      </svg>
+                    </span>
+                  </a>
+                  
+                  <a href="#!" role="button">
+                    <!-- Instagram -->
+                    <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#c13584]">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path
+                          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                      </svg>
+                    </span>
+                  </a>
+                  
+                  <a href="#!" role="button">
+                    <!-- Google -->
+                    <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#ea4335]">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
+                        <path
+                          d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
+                      </svg>
+                    </span>
+                  </a>
+                  
+                  <a href="#!" role="button">
+                    <!-- X -->
+                    <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-white">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 512 512">
+                        <path
+                          d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                      </svg>
+                    </span>
+                  </a>
                 </ul>
             </div>
         </div>
