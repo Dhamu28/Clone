@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUU - Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<style>
+.cursive_text {
+    font-family: "Playball", cursive;
+  font-weight: 400;
+  font-style: italic;
+}
+@keyframes typing {
+      from {
+        width: 0;
+      }
+    }
+    .animate-typing::after {
+      content: "|";
+      animation: typing 1s steps(1) infinite alternate;
+    }
+    .typed-string {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: .15em solid orange; /* Change color as needed */
+      animation: typing 2s steps(30) infinite;
+    }
+</style>
+<body class="bg-white relative">
+    <!-- Pop Modal -->
+        <div class="modal fixed z-20 overflow-y-auto bg-black/10 shadow-lg backdrop-blur-sm p-4 size-full flex justify-center items-center">
+        <div class="shadow-lg shadow-secondary-1 bg-white w-[45%] rounded-2xl mx-auto min-h-[50vh] flex items-center justify-center relative">
+           <button class="close-modal">
+            <svg class="absolute top-5 left-5" width="20" height="20" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 13L13 1M1 1L13 13" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+           </button>            
+          <div class="p-12 text-center flex flex-col gap-8">
+            <svg class="w-16 h-16 mx-auto" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.75 9V9.906C21.75 10.3122 21.64 10.7109 21.4318 11.0597C21.2235 11.4085 20.9247 11.6944 20.567 11.887L14.089 15.375M2.25 9V9.906C2.24998 10.3122 2.35995 10.7109 2.56824 11.0597C2.77652 11.4085 3.07534 11.6944 3.433 11.887L9.911 15.375M9.911 15.375L10.933 14.825C11.2609 14.6484 11.6275 14.5559 12 14.5559C12.3725 14.5559 12.7391 14.6484 13.067 14.825L14.09 15.375L18.75 17.885M9.911 15.375L5.25 17.885M21.75 19.5C21.75 20.0967 21.5129 20.669 21.091 21.091C20.669 21.513 20.0967 21.75 19.5 21.75H4.5C3.90326 21.75 3.33097 21.513 2.90901 21.091C2.48705 20.669 2.25 20.0967 2.25 19.5V8.844C2.24998 8.43777 2.35995 8.0391 2.56824 7.69032C2.77652 7.34154 3.07534 7.05565 3.433 6.863L10.933 2.824C11.2609 2.64738 11.6275 2.55492 12 2.55492C12.3725 2.55492 12.7391 2.64738 13.067 2.824L20.567 6.863C20.9245 7.05557 21.2232 7.3413 21.4315 7.68989C21.6398 8.03848 21.7498 8.43694 21.75 8.84301V19.5Z" stroke="black" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8.10085 11L7.10653 7.36364H7.55398L8.31392 10.3253H8.34943L9.12358 7.36364H9.62074L10.3949 10.3253H10.4304L11.1903 7.36364H11.6378L10.6435 11H10.1889L9.38636 8.10227H9.35795L8.5554 11H8.10085ZM13.0192 11.0568C12.7564 11.0568 12.5297 10.9988 12.3391 10.8828C12.1497 10.7656 12.0036 10.6023 11.9006 10.3928C11.7988 10.1821 11.7479 9.93703 11.7479 9.65767C11.7479 9.37831 11.7988 9.1321 11.9006 8.91903C12.0036 8.70478 12.1468 8.53788 12.3303 8.41832C12.5149 8.29759 12.7304 8.23722 12.9766 8.23722C13.1186 8.23722 13.2589 8.26089 13.3974 8.30824C13.5359 8.35559 13.6619 8.43253 13.7756 8.53906C13.8892 8.64441 13.9798 8.78409 14.0472 8.9581C14.1147 9.1321 14.1484 9.34635 14.1484 9.60085V9.77841H12.0462V9.41619H13.7223C13.7223 9.26231 13.6915 9.125 13.63 9.00426C13.5696 8.88352 13.4832 8.78823 13.3707 8.71839C13.2595 8.64856 13.1281 8.61364 12.9766 8.61364C12.8097 8.61364 12.6652 8.65507 12.5433 8.73793C12.4226 8.8196 12.3297 8.92614 12.2646 9.05753C12.1995 9.18892 12.1669 9.32978 12.1669 9.48011V9.72159C12.1669 9.92756 12.2024 10.1022 12.2734 10.2454C12.3456 10.3874 12.4457 10.4957 12.5735 10.5703C12.7013 10.6437 12.8499 10.6804 13.0192 10.6804C13.1293 10.6804 13.2287 10.665 13.3175 10.6342C13.4074 10.6023 13.485 10.5549 13.5501 10.4922C13.6152 10.4283 13.6655 10.349 13.701 10.2543L14.1058 10.3679C14.0632 10.5052 13.9916 10.6259 13.891 10.7301C13.7904 10.8331 13.6661 10.9136 13.5181 10.9716C13.3701 11.0284 13.2038 11.0568 13.0192 11.0568ZM14.8427 11V7.36364H15.2617V8.70597H15.2972C15.328 8.65862 15.3706 8.59825 15.4251 8.52486C15.4807 8.45028 15.56 8.384 15.663 8.32599C15.7672 8.26681 15.908 8.23722 16.0856 8.23722C16.3152 8.23722 16.5176 8.29463 16.6928 8.40945C16.868 8.52427 17.0047 8.68703 17.103 8.89773C17.2012 9.10843 17.2504 9.35701 17.2504 9.64347C17.2504 9.93229 17.2012 10.1826 17.103 10.3945C17.0047 10.6052 16.8686 10.7686 16.6946 10.8846C16.5206 10.9994 16.32 11.0568 16.0927 11.0568C15.9175 11.0568 15.7772 11.0278 15.6719 10.9698C15.5665 10.9106 15.4854 10.8437 15.4286 10.7692C15.3718 10.6934 15.328 10.6307 15.2972 10.581H15.2475V11H14.8427ZM15.2546 9.63636C15.2546 9.84233 15.2848 10.024 15.3452 10.1815C15.4055 10.3377 15.4937 10.4602 15.6097 10.549C15.7257 10.6366 15.8678 10.6804 16.0359 10.6804C16.2111 10.6804 16.3572 10.6342 16.4744 10.5419C16.5928 10.4484 16.6816 10.3229 16.7408 10.1655C16.8011 10.0069 16.8313 9.83049 16.8313 9.63636C16.8313 9.4446 16.8017 9.27178 16.7425 9.1179C16.6845 8.96283 16.5964 8.84032 16.478 8.75036C16.3608 8.65921 16.2134 8.61364 16.0359 8.61364C15.8654 8.61364 15.7222 8.65684 15.6062 8.74325C15.4902 8.82848 15.4026 8.94804 15.3434 9.10192C15.2842 9.25462 15.2546 9.43277 15.2546 9.63636Z" fill="black"/>
+            </svg>
+    
+            <h2 class="text-3xl md:text-5xl font-bold">icon</h2>
+            <p class="text-lg md:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, temporibus. Repudiandae quibusdam eos quisquam saepe quod sapiente, quaerat tempora voluptate!</p>
+            <div class="relative mt-2 rounded-md w-4/5 mx-auto">
+              <input type="text" name="email" id="subscribe" class="block w-full rounded-2xl md:rounded-3xl md:p-5 p-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm md:text-xl sm:leading-6" placeholder="Enter Your Email">
+              <div class="absolute inset-y-0 right-0 flex items-center">
+                <button class="bg-black text-white rounded-2xl px-4 md:py-3 me-2 hidden md:block font-semibold" type="submit">Book A Demo</button>
+                <button class="bg-black text-white rounded-xl px-2 py-1 me-1 md:hidden" type="submit">Demo</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <script>
+            const closeModal = document.querySelector('.modal');
+            document.querySelector('.close-modal').addEventListener("click", function(){
+                closeModal.style.display= 'none';
+            });
+            
+        </script>
+        <!-- fixed login signup buttons -->
+        <div class="fixed bottom-10 text-md right-10 font-semibold pr-2 pl-4 py-2 bg-white rounded-3xl flex gap-4 shadow-lg border border-gray-200">
+            <button class="text-black">Sign In</button>
+            <button class="bg-black rounded-2xl text-white px-4 py-2">Getting Started</button>
+        </div>
+        <!-- header section -->
+    <header class="bg-white sticky top-0 z-10">
+        <nav class="max-w-[1340px] mx-auto flex items-center justify-between h-[64px] px-4">
+            <div class="w-16">
+                <!-- Logo -->
+            <h1 class="text-3xl font-bold text-black">Web</h1>
+            </div>
+            <div class="drop-menu duration-500 absolute md:static bg-white pb-6 md:pb-0 min-h-[64px] left-[-100%] top-[64px] flex w-full md:w-auto items-center">
+                <ul class="flex flex-col md:flex-row md:items-center gap-4 w-full md:w-auto">
+                    <li class="hover:bg-gray-100 round-none md:rounded-lg pl-4 md:px-3 py-1"><a href="#">Overview</a></li>
+                    <li class="hover:bg-gray-100 round-none md:rounded-lg pl-4 md:px-3 py-1"><a href="#">Tech</a></li>
+                    <li class="hover:bg-gray-100 round-none md:rounded-lg pl-4 md:px-3 py-1"><a href="#">Developers</a></li>
+                    <li class="hover:bg-gray-100 round-none md:rounded-lg pl-4 md:px-3 py-1"><a href="#">Designer</a></li>
+                    <li class="hover:bg-gray-100 round-none md:rounded-lg pl-4 md:px-3 py-1"><a href="#">Talks</a></li>
+                    <li class="block md:hidden pl-4"><button class="hover:bg-gray-100 rounded-xl px-4 py-1">Sign In</button> </li>
+                    <li class="block md:hidden pl-4"><button class="bg-black text-white rounded-xl px-4 py-1">Get Started</button></li>
+                </ul>
+            </div>
+            <div class="hidden md:flex gap-2">
+                <button class="hover:bg-gray-100 rounded-lg px-3 py-1">Sign In</button>
+                <button class="bg-black text-white rounded-lg px-4 py-1">Get Started</button>
+            </div>              
+            <button id="toggleButton" class="md:hidden open">
+                <!-- Heroicon name: menu -->
+                <svg class="icon open-icon h-8 w-8 text-2xl" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+                <svg class="icon close-icon h-8 w-8" style="display: none;" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M1 13L13 1M1 1L13 13" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+            </button>
+            <script>
+                const toggleMenu = document.querySelector('.drop-menu');
+                document.getElementById("toggleButton").addEventListener("click", function() {
+                var button = this;
+                toggleMenu.classList.toggle('left-[0px]');
+                button.classList.toggle("open");
+                button.classList.toggle("close");
+                var openIcon = button.querySelector(".open-icon");
+                var closeIcon = button.querySelector(".close-icon");
+                if (button.classList.contains("open")) {
+                    openIcon.style.display = "inline";
+                    closeIcon.style.display = "none";
+                } else {
+                    openIcon.style.display = "none";
+                    closeIcon.style.display = "inline";
+                }
+                });
+
+            </script>
+        </nav>
+    </header>
+    <!-- hero section -->
+    <section class="max-w-[1340px] mx-4 md:mx-auto py-16 md:py-32">
+        <div class="flex flex-col justify-between items-center">
+           <h1 class="text-5xl md:text-7xl text-black cursive_text">Meet Your New</h1> 
+           <h1 class="text-5xl md:text-7xl text-black font-semibold leading-normal py-3"><span id="typedString" class="typed-string"></span></h1>
+           <div class="flex gap-4 pt-10">
+                <button class="text-black rounded-2xl border border-1 border-gray-800 px-6 py-2">Live Demo</button>
+                <button class="bg-black rounded-2xl text-white px-6 py-2 ">Get Started free</button>
+            </div> 
+        </div>
+        <h1></h1>
+    </section>
+    <!-- Section hero image -->
+    <section class="max-w-[1340px] px-4 md:mx-auto pt-6 text-center">
+        <img class="rounded-3xl mx-auto w-full" src="https://img.freepik.com/free-vector/realistic-responsive-website-design-collection_23-2149500087.jpg?t=st=1710750836~exp=1710754436~hmac=b1123680a0c700264b8b744b068a1cc005133d5c0eda0b269e07a6cb7e5ac0d7&w=996" alt="">
+        <div class="py-10 md:py-20 flex flex-col gap-6 w-4/5 md:w-3/5 mx-auto">
+            <h2 class="text-3xl md:text-5xl font-semibold leading-tight">Lorem ipsum, dolor sit amet consectetur adipisicing!</h2>
+            <p class="text-xl md:text-2xl leading-snug">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et unde, facilis pariatur totam numquam magnam corporis suscipit laborum cum autem.</p>
+        </div>
+    </section>
+    <!-- Section 50-50 box with hover text -->
+    <section class="max-w-[1340px] mx-4 md:mx-auto pt-6">
+        <div class="flex flex-col md:flex-row px-4 mx-auto gap-2 justify-end">
+            <div class="bg-cover bg-center h-screen rounded-3xl mx-auto flex items-end" style="background-image: url(https://img.freepik.com/free-photo/3d-rendering-website-hosting-concept_23-2149484780.jpg?t=st=1710750630~exp=1710754230~hmac=79beaf0b564eb28f879c2e5e7735128b2c16988e697ac71be4a81b877af82c9f&w=740)">
+                <p class="p-2 md:p-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, eum.</p>
+            </div>
+            <div class="bg-cover bg-center h-screen rounded-3xl mx-auto flex items-end" style="background-image: url(https://img.freepik.com/free-vector/colorful-business-landing-page_52683-982.jpg?t=st=1710750934~exp=1710754534~hmac=02389fd08e6943612244e73fbdd21842cbf5f5df3bb74fd355b95079a0ca463f&w=740)">
+                <p class="p-2 md:p-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, eum.</p>
+            </div>
+        </div>
+        <div class="py-10 md:py-20 flex flex-col gap-6 tw-4/5 md:w-3/5 mx-auto text-center">
+            <h2 class="text-3xl :text-5xl font-semibold leading-tight">Lorem ipsum dolor, <span class="cursive_text"> sit amet!</span></h2>
+        <p class="text-xl md:text-2xl leading-snug">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et unde, facilis pariatur totam numquam magnam corporis suscipit laborum cum autem.</p>
+        </div>
+    </section>
+    <!-- Carousel -->
+    <section class="max-w-[1340px] mx-4 md:mx-auto pt-6 pb-20 overflow-hidden">
+        <div class="swiper-container grid md:grid-cols-4 grid-cols-2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide mx-auto rounded-3xl bg-white shadow-secondary-1 hover:scale-105 duration-500">
+              <!-- First slide content -->
+              <div class="relative overflow-hidden bg-cover bg-no-repeat">
+                <img class="rounded-t-3xl" src="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg" alt="" />
+                <a href="#">
+                  <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                </a>
+              </div>
+              <div class="py-8 md:py-16 text-surface bg-yellow-300 rounded-b-3xl text-center">
+                <h5 class="text-3xl md:text-5xl font-bold leading-normal">Card title</h5>
+                <p class="mb-4 text-base">
+                  Some quick example
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide mx-auto rounded-3xl bg-white shadow-secondary-1 hover:scale-105 duration-500">
+              <!-- Second slide content -->
+              <div class="relative overflow-hidden bg-cover bg-no-repeat">
+                <img class="rounded-t-3xl" src="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg" alt="" />
+                <a href="#">
+                  <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                </a>
+              </div>
+              <div class="py-8 md:py-16 text-surface bg-yellow-300 rounded-b-3xl text-center">
+                <h5 class="text-3xl md:text-5xl font-bold leading-normal">Card title</h5>
+                <p class="mb-4 text-base">
+                  Some quick example
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide mx-auto rounded-3xl bg-white shadow-secondary-1 hover:scale-105 duration-500">
+              <!-- Third slide content -->
+              <div class="relative overflow-hidden bg-cover bg-no-repeat">
+                <img class="rounded-t-3xl" src="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg" alt="" />
+                <a href="#">
+                  <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                </a>
+              </div>
+              <div class="py-8 md:py-16 text-surface bg-yellow-300 rounded-b-3xl text-center">
+                <h5 class="text-3xl md:text-5xl font-bold leading-normal">Card title</h5>
+                <p class="mb-4 text-base">
+                  Some quick example
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide mx-auto rounded-3xl bg-white shadow-secondary-1 hover:scale-105 duration-500">
+              <!-- Fourth slide content -->
+              <div class="relative overflow-hidden bg-cover bg-no-repeat">
+                <img class="rounded-t-3xl" src="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg" alt="" />
+                <a href="#">
+                  <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                </a>
+              </div>
+              <div class="py-8 md:py-16 text-surface bg-yellow-300 rounded-b-3xl text-center">
+                <h5 class="text-3xl md:text-5xl font-bold leading-normal">Card title</h5>
+                <p class="mb-4 text-base">
+                  Some quick example
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide mx-auto rounded-3xl bg-white shadow-secondary-1 hover:scale-105 duration-500">
+                <!-- Fifth slide content -->
+                <div class="relative overflow-hidden bg-cover bg-no-repeat">
+                  <img class="rounded-t-3xl" src="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg" alt="" />
+                  <a href="#">
+                    <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                  </a>
+                </div>
+                <div class="py-8 md:py-16 text-surface bg-yellow-300 rounded-b-3xl text-center">
+                  <h5 class="text-3xl md:text-5xl font-bold leading-normal">Card title</h5>
+                  <p class="mb-4 text-base">
+                    Some quick example
+                  </p>
+                </div>
+              </div>
+            <!-- Add more slides as needed -->
+          </div>
+        </div>
+      </section>
+      
+    <!-- CTA Section -->
+    <section class="w-full bg-gray-100 p-10 md:p-20 text-center text-black">
+        <div class="w-4/5 md:w-2/3 mx-auto flex flex-col gap-6">
+            <h2 class="text-3xl md:text-5xl font-semibold">Book A Free Demo</h2>
+            <p class="text-xl md:text-2xl font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ratione nesciunt dolorem tempore neque aliquid, quidem at consequuntur. Obcaecati, voluptate.</p>
+            <div>
+                <div class="relative mt-2 rounded-md shadow-sm md:w-3/5 w-full mx-auto">
+                  <input type="text" name="email" id="subscribe" class="block w-full rounded-2xl bg-gray-100 md:rounded-3xl md:p-5 p-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm md:text-xl sm:leading-6" placeholder="Enter Your Email">
+                  <div class="absolute inset-y-0 right-0 flex items-center z-1">
+                    <button class="bg-black text-white rounded-2xl px-4 md:py-3 me-2 hidden md:block font-semibold" type="submit">Book A Demo</button>
+                    <button class="bg-black text-white rounded-xl px-2 py-1 me-1 md:hidden" type="submit">Demo</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- footer  -->
+    <footer class="bg-black text-white p-5 md:p-20">
+        <div class="max-w-[1340px] mx-auto flex md:flex-row flex-col justify-between gap-4">
+            <div class="text-white text-4xl font-bold">
+                <a href="#">Web</a>
+            </div>
+            <div class="">
+                <ul>
+                    <li class=""><a href="">Footer Link</a></li>
+                    <li class=""><a href="">Footer Link</a></li>
+                    <li class=""><a href="">Footer Link</a></li>
+                    <li class=""><a href="">Footer Link</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <ul>
+                    <li class=""><a href="">Footer Link</a></li>
+                    <li class=""><a href="">Footer Link</a></li>
+                    <li class=""><a href="">Footer Link</a></li>
+                    <li class=""><a href="">Footer Link</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <ul>
+                    <li class=""><a href="">Footer Link</a></li>
+                    <li class=""><a href="">Footer Link</a></li>
+                    <li class=""><a href="">Footer Link</a></li>
+                    <li class=""><a href="">Footer Link</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="pt-5 md:pt-20"><span>Copyright © Web™ 2024</span><span> · </span><span>All Rights Reserved</span></p>
+    </footer>
+    </body>
+   <!-- Link Swiper's JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        loop: true, // Infinite loop
+      });
+    });
+  </script>
+  <script>
+    const text = "Developers";
+    let index = 0;
+    const typedString = document.getElementById('typedString');
+    function type() {
+      if (index < text.length) {
+        typedString.textContent += text[index++];
+        setTimeout(type, 200); // Adjust typing speed here (in milliseconds)
+      } else {
+        index = 0; // Reset index to start typing from the beginning
+        typedString.textContent = ""; // Clear the typed string
+        setTimeout(type, 2000); // Wait before starting typing again (optional)
+      }
+    }
+    type();
+  </script>
+</html>
