@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pika Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="">
+    <!-- Navber Start -->
+    <nav class="w-full xl:w-11/12 mx-auto pt-3 ">
+        <div class="md:mx-8 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="pl-4">
+                <!-- <img src="https://emojicdn.elk.sh/%F0%9F%A6%A9" alt="Logo" class="" style="max-width: 80px;"> -->
+                <h1 class="text-3xl font-bold">DurDesh</h1>
+            </div>
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-toggle" class="md:hidden text-blue-500 text-5xl focus:outline-none pr-4">
+                &#8801;
+            </button>
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#" class="text-blue-500 hover:text-blue-400">Why?</a></li>
+                <li><a href="#" class="text-blue-500 hover:text-blue-400">Pricing</a></li>
+                <li><a href="#" class="text-blue-500 hover:text-blue-400">Login</a></li>
+                <li><a href="#" class="text-blue-500 hover:text-blue-400">Signup</a></li>
+            </ul>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <ul id="mobile-menu" class="md:hidden hidden pb-2 mt-1">
+            <li><a href="#" class="block text-blue-500 hover:text-blue-400 pl-4 py-2">Why?</a></li>
+            <li><a href="#" class="block text-blue-500 hover:text-blue-400 pl-4 py-2">Pricing</a></li>
+            <li><a href="#" class="block text-blue-500 hover:text-blue-400 pl-4 py-2">Login</a></li>
+            <li><a href="#" class="block text-blue-500 hover:text-blue-400 pl-4 py-2">Signup</a></li>
+        </ul>
+    </nav>
+    <!-- Navbar End -->
+    
+    <!-- Hero Start -->
+    <div class="mx-auto px-8 lg:w-3/5 lg:px-0 py-12 text-center sm:text-left">
+        <div class="">
+            <img src="https://emojicdn.elk.sh/%F0%9F%A6%A9" alt="icon" class="mb-6">
+            <h1 class="text-3xl leading-tight md:leading-tight font-bold md:text-5xl mb-8">Pika is a pretty good blogging platform by the people at Good Enough. It’s pretty and easy and pretty easy. You should try it!</h1>
+            <div class="flex flex-col sm:flex-row items-center gap-4">
+
+                <button class="bg-blue-600 hover:bg-blue-500 text-xl md:text-2xl py-2 px-6 md:py-4 md:px-8 rounded-full text-white font-semibold">Give it a try<i class="fas fa-arrow-right pl-3"></i></button>
+                <p class="text-lg text-gray-500">No credit card required.</p>
+                <a href="#" class="flex items-center text-blue-500">
+                    <i class="fas fa-play mr-2"></i>
+                    <span class="underline">See it in action first</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <!-- Large Image section -->
+    <div class="w-full mx-auto px-8 lg:w-3/5 lg:px-0 ">
+        <img class="w-full mx-auto" src="https://img.freepik.com/free-photo/medium-shot-woman-working-laptop_23-2150323516.jpg?w=1380&t=st=1708539702~exp=1708540302~hmac=986e7330935d70636862556b66953fc9392aa02a5b3c5f7103a0dedc04cd2680">
+        <p class="text-xl md:text-3xl leading-8 md:leading-10 py-4"> Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Sit, repellendus ut quis tenetur delectus labore est aliquam reiciendis corporis voluptas quos fugit illo! Vitae consequatur ratione saepe commodi, voluptatum dolorem, sint ullam id a optio, alias eos quia soluta sed, nesciunt nostrum doloremque voluptate illum. Amet voluptatem cum fuga autem.      </p>
+    </div>
+    <!-- Large Image section end -->
+    <!-- Image Boxes Start -->
+    <div class="grid grid-cols-1 md:grid-cols-3 xl:w-11/12 mx-auto gap-8 p-8">
+        <!-- Image Box 1 -->
+        <div class="bg-gray-200 border border-gray-200">
+            <img src="https://img.freepik.com/free-vector/animal-outline-elephant-running_1308-73090.jpg?w=740&t=st=1708368279~exp=1708368879~hmac=e322f5cf4b03fe17840d0d9ca72f7682f3971fa4a2d74b8a78fdbc69f75d6300" alt="Image 1" class="mx-auto">
+            <div class="p-6">
+                <h2 class="text-3xl font-bold mb-2">Heading 1</h2>
+                <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum nisi id turpis.</p>
+            </div>
+        </div>
+        <!-- Image Box 2 -->
+      <div class="bg-gray-200 border border-gray-200">
+        <img src="https://img.freepik.com/free-vector/animal-outline-elephant-standing_1308-71810.jpg?w=740&t=st=1708368241~exp=1708368841~hmac=624f3ec57f2d45ed3abf6db2afd39d3768a6fc6f65c37728753f144b1fd36e55" alt="Image 2" class="mx-auto ">
+        <div class="p-6">
+             <h2 class="text-3xl font-bold mb-2">Heading 2</h2>
+            <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum nisi id turpis.</p>
+        </div>
+      </div>
+      <!-- Image Box 3 -->
+      <div class="bg-gray-200 border border-gray-200">
+        <img src="https://img.freepik.com/free-vector/animal-outline-elephant-running_1308-73090.jpg?w=740&t=st=1708368279~exp=1708368879~hmac=e322f5cf4b03fe17840d0d9ca72f7682f3971fa4a2d74b8a78fdbc69f75d6300" alt="Image 3" class="mx-auto " >
+        <div class="p-6">
+            <h2 class="text-3xl font-bold mb-2">Heading 3</h2>
+            <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum nisi id turpis.</p>
+        </div>
+      </div>
+    </div>
+<!-- image box container end here -->
+<!-- Text button section -->
+    <div class="w-full mx-auto px-8 lg:w-3/5 lg:px-0">
+        <p class="text-xl md:text-3xl leading-8 md:leading-10 py-6">Lorem ipsum dolor sit <a class="text-blue-500 underline" href="#">amet consectetur</a> adipisicing, elit. <a class="text-blue-500 underline" href="#">Eum accusantium</a> asperiores ipsa dolores vero harum <a class="text-blue-500 underline" href="#">placeat</a>, quibusdam debitis cupiditate alias?</p>
+        <div class="text-center py-6">
+            <button class="bg-blue-600 hover:bg-blue-500 text-xl md:text-2xl py-2 px-6 md:py-4 md:px-8 rounded-full text-white font-semibold mx-auto">Give it a try to do something <i class="fas fa-arrow-right pl-3"></i></button>
+        </div>
+    </div>
+<!-- Text button section end -->
+<!-- Blockquote goes here -->
+    <div class="w-full mx-auto px-8 lg:w-2/5 lg:px-0 py-12">
+        <figure class="w-full mx-auto text-center">
+       <blockquote>
+            <p class="text-2xl italic font-light ">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
+            <div class="">
+                <cite class="pe-3 font-medium"><a class="text-blue-500 underline" href="">- Michael Gough</a> Thanks Gough!</cite>
+            </div>
+        </figcaption>
+        </figure>
+        <figure class="w-full mx-auto text-center pt-8">
+           <blockquote>
+                <p class="text-2xl italic font-light ">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
+            </blockquote>
+            <figcaption class="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
+                <div class="">
+                <cite class="pe-3 font-medium"><a class="text-blue-500 underline" href="">- Michael Gough</a> Thanks Gough!</cite>
+                </div>
+            </figcaption>
+        </figure>
+    </div> 
+    <!-- Blockquote goes ends here -->
+
+     <!-- center green box container here -->
+    <div class="w-full mx-auto px-8 lg:w-3/5 lg:px-0 ">
+        <div class="bg-green-100 p-8">
+        <div class="money-text text-3xl text-center pb-1">
+            <i class="fa-solid fa-money-bills"></i>
+            <i class="fa-solid fa-money-bills"></i>
+            <i class="fa-solid fa-money-bills"></i>
+            <i class="fa-solid fa-money-bills"></i>
+            <i class="fa-solid fa-money-bills"></i>
+        </div>
+        <h3 class="text-3xl md:text-4xl font-bold text-center py-4">A few words about pricing…</h3>
+        <p class="text-2xl pt-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, quos sequi aperiam voluptatibus facilis ipsum, saepe unde quasi eius, neque deserunt accusamus doloremque voluptatem impedit libero sapiente perferendis quaerat harum mollitia nisi hic nemo velit accusantium enim! Incidunt iusto eos provident, id commodi modi, officia, ut placeat veritatis vitae quae et eius. Perferendis molestiae maxime quos ducimus quidem pariatur explicabo.</p>
+        <p class="text-2xl pt-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, quos sequi aperiam voluptatibus facilis ipsum, saepe unde quasi eius, neque deserunt accusamus.</p>
+        <div class="relative overflow-x-auto pt-8">
+            <table class="w-full text-lg text-left rtl:text-right">
+                <thead class="text-xs text-center">
+                    <tr>
+                      <th scope="col" class=""></th>
+                      <th scope="col" class="">
+                        <h3 class="text-2xl font-bold">Title</h3>
+                        <p class="text-lg font-light pb-3">test</p>
+                        <button class="bg-blue-600 hover:bg-blue-500 text-sm md:text-xl font-semibold text-white rounded-full mx-auto py-2 px-6"><p>Buy now</p></button>
+                      </th>
+                      <th scope="col" class="">
+                        <h3 class="text-2xl font-bold">Title</h3>
+                        <p class="text-lg font-light pb-3">test</p>
+                        <button class="bg-blue-600 hover:bg-blue-500 text-sm md:text-xl font-semibold text-white rounded-full mx-auto py-2 px-6"><p>Buy now</p></button>
+                      </th>
+                    </tr>
+                </thead>
+                    <!-- Table body -->
+                  <tbody class="divide-y divide-green-500 text-center">
+                    <tr>
+                      <td class="px-6 py-4 whitespace-nowrap text-left">Blog posts  </td>
+                      <td class="px-6 py-4 whitespace-nowrap">50</td>
+                      <td class="px-6 py-4 whitespace-nowrap">Unlimited</td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 whitespace-nowrap text-left">Pages</td>
+                      <td class="px-6 py-4 whitespace-nowrap">10</td>
+                      <td class="px-6 py-4 whitespace-nowrap">Inactive</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 whitespace-nowrap text-left">Great writing experience</td>
+                      <td class="px-6 py-4 whitespace-nowrap "><i class="fa-solid fa-check text-green-400"></i></td>
+                      <td class="px-6 py-4 whitespace-nowrap "><i class="fa-solid fa-check text-green-400"></i></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 whitespace-nowrap text-left">Image upload    </td>
+                      <td class="px-6 py-4 whitespace-nowrap "><i class="fa-solid fa-check text-green-400"></i></td>
+                      <td class="px-6 py-4 whitespace-nowrap "><i class="fa-solid fa-check text-green-400"></i></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 whitespace-nowrap text-left">Simple theming  </td>
+                      <td class="px-6 py-4 whitespace-nowrap "><i class="fa-solid fa-check text-green-400"></i></td>
+                      <td class="px-6 py-4 whitespace-nowrap "><i class="fa-solid fa-check text-green-400"></i></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 whitespace-nowrap text-left">Custom homepage </td>
+                      <td class="px-6 py-4 whitespace-nowrap "><i class="fa-solid fa-check text-green-400"></i></td>
+                      <td class="px-6 py-4 whitespace-nowrap "><i class="fa-solid fa-check text-green-400"></i></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 whitespace-nowrap text-left">Export</td>
+                      <td class="px-6 py-4 whitespace-nowrap "><i class="fa-solid fa-check text-green-400"></i></td>
+                      <td class="px-6 py-4 whitespace-nowrap "><i class="fa-solid fa-check text-green-400"></i></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 whitespace-nowrap text-left">Host on your own domain</td>
+                      <td class="px-6 py-4 whitespace-nowrap "></td>
+                      <td class="px-6 py-4 whitespace-nowrap "><i class="fa-solid fa-check text-green-400"></i></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-6 py-4 whitespace-nowrap text-left">Remove Pika’s branding </td>
+                      <td class="px-6 py-4 whitespace-nowrap "></td>
+                      <td class="px-6 py-4 whitespace-nowrap "><i class="fa-solid fa-check text-green-400"></i></span>
+                      </td>
+                    </tr>
+                    <!-- More rows can be added here -->
+                  </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+    <!-- center green box container end here -->
+    <!-- Center text with bg image Start here -->
+    <div class="w-full mx-auto px-8 lg:w-2/5 lg:px-0 py-12 text-center">
+        <p class="italic text-2xl">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dolore possimus soluta tempore dolorem blanditiis, aliquid accusamus nesciunt rem incidunt cumque rerum libero molestias. Doloremque laudantium totam "</p>
+    </div>
+    <!-- Center text with bg image end here-->
+    <!-- bottom para -->
+    <div class="w-full mx-auto px-8 lg:w-3/5 lg:px-0">
+        <p class="text-xl md:text-3xl leading-8 md:leading-10 py-6">Lorem ipsum dolor sit <a class="text-blue-500 underline" href="#">amet consectetur</a> adipisicing, elit. <a class="text-blue-500 underline" href="#">Eum accusantium</a> asperiores ipsa dolores vero harum <a class="text-blue-500 underline" href="#">placeat</a>, quibusdam debitis cupiditate alias?</p>
+        <p class="text-xl md:text-3xl leading-8 md:leading-10 py-6">Lorem ipsum dolor sit <a class="text-blue-500 underline" href="#">amet consectetur</a> adipisicing, elit. <a class="text-blue-500 underline" href="#">Eum accusantium</a> asperiores ipsa dolores vero harum <a class="text-blue-500 underline" href="#">placeat</a>, quibusdam debitis cupiditate alias?</p>
+        
+    </div>
+    <div class="w-full mx-auto px-8 sm:px-0 lg:w-3/5 flex flex-col gap-4 sm:flex-row justify-between items-center">
+        
+            <img src="https://emojicdn.elk.sh/%F0%9F%A6%A9" alt="icon" class="w-30">
+            <button class="bg-blue-600 hover:bg-blue-500 text-xl md:text-2xl py-2 px-6 md:py-4 md:px-8 rounded-full text-white font-semibold">Give it a try<i class="fas fa-arrow-right pl-3"></i></button>                
+        
+    </div>
+    <footer class="w-full xl:w-11/12 flex justify-between mx-auto px-8 py-6 ">
+        <div>
+            <ul class="flex flex-col gap-4 md:flex-row">
+                <li><a class="text-blue-500 underline" href="#">f_link1</a></li>
+                <li><a class="text-blue-500 underline" href="#">f_link2</a></li>
+                <li><a class="text-blue-500 underline" href="#">f_link3</a></li>
+                <li><a class="text-blue-500 underline" href="#">f_link4</a></li>
+                <li><a class="text-blue-500 underline" href="#">f_link5</a></li>
+            </ul>
+        </div>
+        <div class="" >
+            <p><a class="text-blue-500 underline" href="#">Tailwind</a> helps to do that</p>
+        </div>
+    </footer>
+</body>
+<script>
+    document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</html>
